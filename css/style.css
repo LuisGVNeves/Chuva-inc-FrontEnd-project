@@ -463,3 +463,21 @@
   background: linear-gradient(#ffbb68, #ff9d60);
   cursor: pointer;
 }
+
+
+
+/*Footer*/
+#foot-container{
+  font-family: 'Quicksand', sans-serif;
+  width: 1086px;
+  height: 181px;
+  position: absolute;
+  bottom: 0%;
+  left: 263px;
+  display: flex;
+  align-items: center;
+}
+#div-text p{
+  padding: 7px;
+  font-weight: 500;
+}
