@@ -55,6 +55,7 @@
     <!--Detalhes da noticia e botões-->
     <aside>
 
+      <!--Botões-->
       <div id="botoes-container">
         <!--Botão download-->
         <button type="button" id="download"> 
@@ -80,6 +81,7 @@
         </span>
       </div>
 
+      <!--Div que da os detalhes da noticia-->
       <section id="detalhes">
         <h3>Detalhes</h3>
         <ul>
@@ -104,6 +106,50 @@
       </section>
 
     </aside>
+
+
+    <section id="container-resumo">
+      <div id="resumo-noticia">
+        <h3>Resumo</h3>
+      </div>
+
+      <!--Quando essa div for clicada, vai esconder os paragrafos-->
+      <div id="paragrafos-resumo-noticia" onclick="ocultarParagrafos()">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!</p>
+          
+          <!--Quando texto ver mais for clicado, vai mostrar os paragrafos-->
+          <span class="orange" id="verMais" onclick="mostrarParagrafos()">Ver mais</span>
+        </p>
+        
+        <div id="paragrafos-ocultos">
+          <!--Vou separar os paragrafos utilizando classe separador com lineHeight-->
+          <p class="separador">&nbsp</p>
+  
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!</p>
+          </p>
+  
+          <p class="separador">&nbsp</p>
+  
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!</p>
+          </p>
+
+          <p class="separador">&nbsp </p>
+  
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!</p>
+          </p>
+
+        </div>
+
+        
+      </div>
+    </section>
+
+
+
 
 
     <!--Barra de navegação lado esquerdo-->
@@ -136,5 +182,7 @@
       </nav>
     </main>
 
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
