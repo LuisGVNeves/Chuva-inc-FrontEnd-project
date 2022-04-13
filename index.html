@@ -10,12 +10,104 @@
   <body>
 
     <!--Manchete principal-->
-    <header>
+    <header id="head-principal">
+      <section>
+        <p>Anais do Simpósio Latino Americano de Ciências de Alimentos</p>
+        <h1>Anais do 13 Simpósio Latino Americano de Ciência de Alimentos</h1>
+        <span>ISSN: 1234-5678</span>
+      </section>
+
+
+      <!--Botão para escolher linguagem da página-->
+      <button type="button" id="botao-pt-br">
+        <span>
+          <img src="./img/world.png" alt="icon-world" id="icon-world">
+        </span>
+        PT,BR
+        <span>
+          <img src="./img/dropdown.png" alt="icon-dropdown">
+        </span>
+      </button>
+
+      <section class="usuario-header">
+        <!--Parte do usuário com foto-->
+        <span id="bem-vindo">Bem vindo!</span>
+        <span>alguem12@galoascience.com</span>
+        <div>
+          <img src="./img/circle.png" alt="circulo" id="photo-usuario">
+        </div>
+      </section>
 
     </header>
-    
+
+    <!--Principal-->
+    <main id="navegacao-principal">
+      <div id="noticia-principal">
+        <h3>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</h3>
+        <img src="./img/video-img.png" alt="video-Analise Sensorial de preparações funcionais escolares" id="video-img">
+      </div>
+
+      <div>
+      </div>
+      
+    </main>
+
+    <!--Detalhes da noticia e botões-->
+    <aside>
+
+      <div id="botoes-container">
+        <!--Botão download-->
+        <button type="button" id="download"> 
+          <span>
+            <img src="./img/download.png" alt="download foto">
+          </span>
+          <span id="downWord">Download</span>
+        </button>
+        
+        <!--Botão estrela-->
+        <button type="button" id="estrela"> 
+          <span> <img src="./img/star.png" alt="star foto"></span>
+        </button>
+
+        <!--Botão doi-->
+        <button type="button" id="doi">
+          <span> <img src="./img/doi.png" alt="doi foto"> </span>
+        </button>
+
+        <!--Link para citar trabalho-->
+        <span id="link-citacao">
+          <a href="#">COMO CITAR ESSE TRABALHO</a>
+        </span>
+      </div>
+
+      <section id="detalhes">
+        <h3>Detalhes</h3>
+        <ul>
+          <li>Tipo de Apresentação: <strong>Pôster</strong> </li>
+          <li>Eixo Temático: <strong>Alimentação e saúde (AS)</strong> </li>
+          <li>Palavras-Chaves: <strong>Alimentos funcionais, alimentação escolar</strong> </li>
+        </ul>
+
+        <h4>Autores:</h4>
+        <ul>
+          <li>Galileo Galilei¹</li>
+          <li>Berta Lange de Marrets²</li>
+          <li>Isaac Newton³</li>
+          <li>Cesar Lattes¹</li>
+          <li>Stephen Hawking⁴</li>
+          <li id="espacamento"></li>
+          <li>Universidade Estadual de Campinas</li>
+          <li>Universidade de São Paulo</li>
+          <li>Instituto Nacional de Pesquisas Espaciais</li>
+          <li>Universidade Federal do Rio de Janeiro</li>
+        </ul>
+      </section>
+
+    </aside>
+
+
     <!--Barra de navegação lado esquerdo-->
-    <main id="nav-bar">
+    <section id="nav-bar">
 
       <!-- Titulo da nav-bar -->
       <header>
