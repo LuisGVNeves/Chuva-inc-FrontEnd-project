@@ -22,6 +22,11 @@ function mostrarParagrafos() {
     // Aumentando a borda da div que tem os paragrafos, ao ser clicada
     let container_resumo = document.querySelector('#container-resumo');
     container_resumo.style.height = '650px'; 
+
+
+    // # Descendo a div Discussões quando o paragrafo diminuir
+    let discussoes_container = document.querySelector('#discussoes-container');
+    discussoes_container.style.top = '160%';
   
     // Parando a propagação de eventos
     e.stopPropagation();
@@ -37,6 +42,15 @@ function ocultarParagrafos(){
   paragrafos_resumo_noticia.addEventListener('click', function(e){
     paragrafos_ocultos.style.display = 'none';
   })
+
+  // Diminuindo a borda da div que tem os paragrafos, ao ser clicada
+  let container_resumo = document.querySelector('#container-resumo');
+  container_resumo.style.height = '200px'; 
+
+
+  // # Subindo a div Discussões quando o paragrafo diminuir
+  let discussoes_container = document.querySelector('#discussoes-container');
+  discussoes_container.style.top = '110%';
 
 }
 

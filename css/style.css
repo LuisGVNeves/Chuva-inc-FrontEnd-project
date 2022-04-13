@@ -391,3 +391,75 @@
 #paragrafos-ocultos{
   display: none;
 }
+
+
+/*    Discussões container    */
+#discussoes-container{
+  width: 1058px;
+  height: 621px;
+  position: absolute;
+  left: 16.6%;
+  top: 160%;
+  border: 1px solid #c7c7c7;
+
+  /*Centralizei todos os elementos com flex*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/*Titulo*/
+#discussoes-titulo{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 45px;
+  width: 1058px;
+  height: 45px;
+  background-color: #FDF1EB;
+  color: #4E4E4E;
+  padding-left: 20px;
+}
+
+/*Palavra dentro do botão*/
+#discussoes-container span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ED7839;
+  width: 525px;
+  text-align: center;
+  height: 22px;
+  margin-top: 15px;
+  
+}
+/*Paragrafo de discussao*/
+#paragrafo-discussao{
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 20px;
+
+}
+/*Botão de criar tópico*/
+#btn-criar-topico{
+  margin-top: 20px;
+  height: 40px;
+  background: linear-gradient(#FEB254, #F0813D);
+  text-align: center;
+}
+#btn-criar-topico span {
+  color: white;
+  padding-right: 5px;
+  padding-bottom: 17px;
+}
+#plus{
+  height: 17px;
+  margin-top: 1px;
+}
+#btn-criar-topico:hover{
+  background: linear-gradient(#ffbb68, #ff9d60);
+  cursor: pointer;
+}
