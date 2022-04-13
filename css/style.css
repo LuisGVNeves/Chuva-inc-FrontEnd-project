@@ -157,7 +157,7 @@
 #navegacao-principal{
   width: 1120px;
   height: 1753px;
-  border: 1px solid #000;
+  /*border: 1px solid #000;*/
   position: absolute;
   top: 88px;
   left: 263px;
@@ -396,7 +396,7 @@
 /*    Discussões container    */
 #discussoes-container{
   width: 1058px;
-  height: 621px;
+  height: 651px;
   position: absolute;
   left: 16.6%;
   top: 160%;
@@ -466,6 +466,75 @@
 
 
 
+
+
+/*Área de discussões com CRUD*/
+#container-divs{
+  border: 1px solid #E7E7E7;
+  border-radius: 4px;
+  width: 1028px;
+  height: 148px;
+  position: absolute;
+  top: 142%;
+  left: 17.5%;
+}
+#div-1,
+#div-2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  padding-left: 25px;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 3px;
+}
+#div-2{
+  border: 1px solid #E7E7E7;
+}
+
+/*Botões de likes e resposta na lista*/
+#likes-respostas ul{
+  list-style-type: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+#likes-respostas ul li {
+  padding: 10px;
+}
+
+/*Icones e caixa de perguntas*/
+#list-icon{
+}
+
+#assunto-pergunta{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  width: 267px;
+  height: 20px;
+  color: #ED7839;
+  font-size: 16px;
+  line-height: 20px;
+}
+#autor{
+  color: #5C5C5C;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Footer*/
 #foot-container{
   font-family: 'Quicksand', sans-serif;
@@ -481,3 +550,16 @@
   padding: 7px;
   font-weight: 500;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

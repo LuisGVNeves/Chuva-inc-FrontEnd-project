@@ -28,6 +28,15 @@ function mostrarParagrafos() {
     let discussoes_container = document.querySelector('#discussoes-container');
     discussoes_container.style.top = '160%';
   
+
+    /*
+      - Ao clicar na frase "ver mais", a div é esticada porém come toda a div
+      que contém os likes e respostas do usuário, então preciso ajustar a altura
+    */
+    let container_divs = document.querySelector('#container-divs');
+    container_divs.style.top = '193%'
+
+
     // Parando a propagação de eventos
     e.stopPropagation();
   })
@@ -51,6 +60,17 @@ function ocultarParagrafos(){
   // # Subindo a div Discussões quando o paragrafo diminuir
   let discussoes_container = document.querySelector('#discussoes-container');
   discussoes_container.style.top = '110%';
+
+
+    /*
+      - Ao clicar na frase "ver mais", a div é esticada porém come toda a div
+      que contém os likes e respostas do usuário, então preciso ajustar a altura
+    
+      - Dessa vez, quando a div recolhe, o container de divs que tem os likes e respostas
+      dos usuários, fica lá embaixo, então preciso subir
+  */
+  let container_divs = document.querySelector('#container-divs');
+  container_divs.style.top = '143%'
 
 }
 
