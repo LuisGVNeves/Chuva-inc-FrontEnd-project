@@ -9,232 +9,10 @@
   </head>
   <body>
 
-    <!--Manchete principal-->
-    <header id="head-principal">
-      <section>
-        <p>Anais do Simpósio Latino Americano de Ciências de Alimentos</p>
-        <h1>Anais do 13 Simpósio Latino Americano de Ciência de Alimentos</h1>
-        <span>ISSN: 1234-5678</span>
-      </section>
 
 
-      <!--Botão para escolher linguagem da página-->
-      <button type="button" id="botao-pt-br">
-        <span>
-          <img src="./img/world.png" alt="icon-world" id="icon-world">
-        </span>
-        PT,BR
-        <span>
-          <img src="./img/dropdown.png" alt="icon-dropdown">
-        </span>
-      </button>
-
-      <section class="usuario-header">
-        <!--Parte do usuário com foto-->
-        <span id="bem-vindo">Bem vindo!</span>
-        <span>alguem12@galoascience.com</span>
-        <div>
-          <img src="./img/circle.png" alt="circulo" id="photo-usuario">
-        </div>
-      </section>
-
-    </header>
-
-    <!--Principal-->
-    <main id="navegacao-principal">
-      <div id="noticia-principal">
-        <h3>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</h3>
-        <img src="./img/video-img.png" alt="video-Analise Sensorial de preparações funcionais escolares" id="video-img">
-      </div>
-
-      <div>
-      </div>
-      
-    </main>
-
-    <!--Detalhes da noticia e botões-->
-    <aside>
-
-      <!--Botões-->
-      <div id="botoes-container">
-        <!--Botão download-->
-        <button type="button" id="download"> 
-          <span>
-            <img src="./img/download.png" alt="download foto">
-          </span>
-          <span id="downWord">Download</span>
-        </button>
-        
-        <!--Botão estrela-->
-        <button type="button" id="estrela"> 
-          <span> <img src="./img/star.png" alt="star foto"></span>
-        </button>
-
-        <!--Botão doi-->
-        <button type="button" id="doi">
-          <span> <img src="./img/doi.png" alt="doi foto"> </span>
-        </button>
-
-        <!--Link para citar trabalho-->
-        <span id="link-citacao">
-          <a href="#">COMO CITAR ESSE TRABALHO?</a>
-        </span>
-      </div>
-
-      <!--Div que da os detalhes da noticia-->
-      <section id="detalhes">
-        <h3>Detalhes</h3>
-        <ul>
-          <li>Tipo de Apresentação: <strong>Pôster</strong> </li>
-          <li>Eixo Temático: <strong>Alimentação e saúde (AS)</strong> </li>
-          <li>Palavras-Chaves: <strong>Alimentos funcionais, alimentação escolar</strong> </li>
-        </ul>
-
-        <h4>Autores:</h4>
-        <ul>
-          <li>Galileo Galilei¹</li>
-          <li>Berta Lange de Marrets²</li>
-          <li>Isaac Newton³</li>
-          <li>Cesar Lattes¹</li>
-          <li>Stephen Hawking⁴</li>
-          <li id="espacamento"></li>
-          <li>Universidade Estadual de Campinas</li>
-          <li>Universidade de São Paulo</li>
-          <li>Instituto Nacional de Pesquisas Espaciais</li>
-          <li>Universidade Federal do Rio de Janeiro</li>
-        </ul>
-      </section>
-
-    </aside>
-
-
-    <section id="container-resumo">
-      <div id="resumo-noticia">
-        <h3>Resumo</h3>
-      </div>
-
-      <!--Quando essa div for clicada, vai esconder os paragrafos-->
-      <div id="paragrafos-resumo-noticia" onclick="ocultarParagrafos()">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!</p>
-          
-          <!--Quando texto ver mais for clicado, vai mostrar os paragrafos-->
-          <span class="orange" id="verMais" onclick="mostrarParagrafos()">Ver mais</span>
-        </p>
-        
-        <div id="paragrafos-ocultos">
-          <!--Vou separar os paragrafos utilizando classe separador com lineHeight-->
-          <p class="separador">&nbsp</p>
-  
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!</p>
-          </p>
-  
-          <p class="separador">&nbsp</p>
-  
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!</p>
-          </p>
-
-          <p class="separador">&nbsp </p>
-  
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!</p>
-          </p>
-
-        </div>
-
-        
-      </div>
-    </section>
-
-
-    
-    <!--Discussões-->
-    <section id="discussoes-container">
-      <div id="discussoes-titulo">
-        <h3>Discussões</h3>
-      </div>
-
-      <span>Compartilhe suas ideias ou dúvidas com os autores !</span>
-
-      <!--Imagens da area discussoes-->
-      <div id="imagens-autores">
-        <img src="./img/maozinha.png" alt="mao png">
-        <img src="./img/QA.png" alt="qa png">
-        <img src="./img/pessoas.png" alt="pessoas">
-      </div>
-
-      <!--Area pra informar usuário para dar sugestões-->
-      <div>
-        <p id="paragrafo-discussao">
-          Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? <br> Deixe seus questionamentos ou sugestões para o autor !
-        </p>
-      </div>
-
-      <!--Botão criar tópico-->
-      <button id="btn-criar-topico">
-        <img src="./img/plus.png" alt="plus imagem" id="plus">
-        <span>Criar Tópico</span>
-      </button>
-    </section>
-
-
-    <!--Onde vai ficar tipo um CRUD-->
-    <section id="container-divs">
-
-      <!--Primeira div que tem o assunto da pergunta do usuario-->
-      <div id="div-1">
-        <span id="assunto-pergunta">Assunto da pergunta aparece aqui</span>
-        <span id="autor">Carlos Henrique Santos</span>
-        
-        <!--Pergunta que usuário fez-->
-        <div>
-          <p>
-            Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
-          </p>
-        </div>
-
-        <div id="likes-respostas">
-          <ul>
-            <li><img src="./img/list.png" alt="list icon" id="list-icon"></li>
-            <li><img src="./img/heart.png" alt="heart icon"></li>
-            <li>1 like</li>
-            <li>1 resposta</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- Segunda Div-->
-      <div id="div-2">
-        <span id="assunto-pergunta">Assunto da pergunta aparece aqui</span>
-        <span id="autor">Carlos Henrique Santos</span>
-        
-        <!--Pergunta que usuário fez-->
-        <div>
-          <p>
-            Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
-          </p>
-        </div>
-
-        <div id="likes-respostas">
-          <ul>
-            <li><img src="./img/list.png" alt="list icon" id="list-icon"></li>
-            <li><img src="./img/heart.png" alt="heart icon"></li>
-            <li>1 like</li>
-            <li>1 resposta</li>
-          </ul>
-        </div>
-
-      </div>
-
-
-    </section>
-
-
-    <!--Barra de navegação lado esquerdo-->
-    <section id="nav-bar">
+    <!--Barra lateral-->
+    <section id="nav-bar-container">
 
       <!-- Titulo da nav-bar -->
       <header>
@@ -247,10 +25,10 @@
           <img src="./img/slaca-image.png" alt="slaca-imagem" id="slaca-imagem">
         </div>
       </header>
-      
+
+
       <!--Navegação dos links-->
       <nav id="main-navigation">
-
         <!--&nbsp para dar espaço e preencher a barrinha HTML entities-->
         <ul>
           <li><span class="orange-bar">&nbsp</span> Apresentação</li>
@@ -261,10 +39,232 @@
           <li><span class="orange-bar">&nbsp</span> Contato</li>
         </ul>
       </nav>
+      
+    </section>
+
+
+
+
+
+
+    <!--                              Header da pagina                              -->
+    <header id="head-principal">
+
+
+      <!--Sessão onde fica as informações do header-->
+      <section>
+        <p>Anais do Simpósio Latino Americano de Ciências de Alimentos</p>
+        <h1>Anais do 13 Simpósio Latino Americano de Ciência de Alimentos</h1>
+        <span>ISSN: 1234-5678</span>
+      </section>
+
+      <!--Botão para escolher linguagem da página-->
+      <button type="button" id="botao-pt-br">
+        <span>
+          <img src="./img/world.png" alt="icon-world" id="icon-world">
+        </span>
+        PT,BR
+        <span>
+          <img src="./img/dropdown.png" alt="icon-dropdown">
+        </span>
+      </button>
+
+      <!-- Sessão onde fica foto do usuário + email-->
+      <section class="usuario-header">
+        <ul>
+          <li id="bem-vindo">Bem vindo!</li>
+          <li>alguem12@galoascience.com</li>
+          <span><img src="./img/circle.png" alt="circulo" id="photo-usuario"></span>
+        </ul>
+      </section>
+
+    </header>
+
+
+
+
+
+
+
+    <!--Conteúdo principal da página-->
+    <main id="navegacao-principal">
+
+      <!--Div com titulo da noticia-->
+      <div id="noticia-principal">
+        <h3>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</h3>
+        <img src="./img/video-img.png" alt="video-Analise Sensorial" id="video-img">
+      </div>
+
+      <!--Detalhes da noticia e botões-->
+      <aside>
+
+        <!--Botões-->
+        <div id="botoes-container">
+          <!--Botão download-->
+          <button type="button" id="download"> 
+            <img src="./img/download.png" alt="download foto">&nbspDownload
+          </button>
+          
+          <!--Botão estrela-->
+          <button type="button" id="estrela"> 
+            <span> <img src="./img/star.png" alt="star foto"></span>
+          </button>
+
+          <!--Botão doi-->
+          <button type="button" id="doi">
+            <span> <img src="./img/doi.png" alt="doi foto"> </span>
+          </button>
+
+          <!--Link para citar trabalho-->
+          <a href="#" id="link-citacao">COMO CITAR ESSE TRABALHO?</a>
+          
+        </div>
+
+        <!--Div que da os detalhes da noticia-->
+        <section id="detalhes">
+          <h3>Detalhes</h3>
+          <ul>
+            <li>Tipo de Apresentação: <strong>Pôster</strong> </li>
+            <li>Eixo Temático: <strong>Alimentação e saúde (AS)</strong> </li>
+            <li>Palavras-Chaves: <strong>Alimentos funcionais, alimentação escolar</strong> </li>
+          </ul>
+
+          <h4>Autores:</h4>
+          <ul>
+            <li>Galileo Galilei¹</li>
+            <li>Berta Lange de Marrets²</li>
+            <li>Isaac Newton³</li>
+            <li>Cesar Lattes¹</li>
+            <li>Stephen Hawking⁴</li>
+            <li id="espacamento"></li>
+            <li>Universidade Estadual de Campinas</li>
+            <li>Universidade de São Paulo</li>
+            <li>Instituto Nacional de Pesquisas Espaciais</li>
+            <li>Universidade Federal do Rio de Janeiro</li>
+          </ul>
+        </section>
+      </aside>
+
+
+
+      <!--Sessão onde tem o resumo da noticia, usuário pode clicar pra ver-->
+      <section id="container-resumo">
+        
+        <!--Titulo do resumo-->
+        <h3 id="resumo-noticia">Resumo</h3>
+
+        <!--Quando essa área da div que acopla os <p> for clicada, vai esconder os paragrafos-->
+        <div id="paragrafos-resumo-noticia" onclick="ocultarParagrafos()">
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!</p>
+            
+            <!--Quando texto ver mais for clicado, vai mostrar os paragrafos-->
+            <span class="orange" id="verMais" onclick="mostrarParagrafos()">Ver mais</span>
+          </p>
+          
+          <div id="paragrafos-ocultos">
+            <!--Vou separar os paragrafos utilizando classe separador com lineHeight-->
+            <p class="separador">&nbsp</p>
+    
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!</p>
+            </p>
+    
+            <p class="separador">&nbsp</p>
+    
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!</p>
+            </p>
+
+            <p class="separador">&nbsp </p>
+    
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, culpa. Ipsum eligendi vero placeat quo minus, voluptatem voluptates aut alias aperiam, minima, eaque consequatur voluptate quibusdam! Ipsa quae id animi!</p>
+            </p>
+
+          </div>
+
+          
+        </div>
+      </section>
+
+      
+      <section id="discussoes-container">
+
+        <!--Titulo das discussões-->
+        <h3 id="discussoes-titulo">Discussões</h3>
+
+        <span id="compartilhe-ideias">Compartilhe suas ideias ou dúvidas com os autores !</span>
+
+        <!--Imagens da area discussoes-->
+        <div id="imagens-autores">
+          <img src="./img/maozinha.png" alt="mao png">
+          <img src="./img/QA.png" alt="qa png">
+          <img src="./img/pessoas.png" alt="pessoas">
+        </div>
+
+        <!--Area pra informar usuário para dar sugestões-->
+        <div id="paragrafo-discussao">
+          <p>
+            Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? <br> Deixe seus questionamentos ou sugestões para o autor !
+          </p>
+        </div>
+
+        <!--Botão criar tópico-->
+        <button id="btn-criar-topico">
+          <img src="./img/plus.png" alt="plus imagem" id="plus">
+          <span>Criar Tópico</span>
+        </button>
+        
+        
+        <!--Onde vai ficar tipo um CRUD-->
+        <section id="container-divs">
+
+          <ul class="ul">
+            <li id="assunto-pergunta">Assunto da pergunta aparece aqui</li>
+            <li id="autor">Carlos Henrique Santos</li>
+            <li>
+              <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
+            </li>
+            <li>
+              <ul id="likes-respostas">
+                <li><img src="./img/list.png" alt="list icon" id="list-icon"></li>
+                <li><img src="./img/heart.png" alt="heart icon"></li>
+                <li>1 like</li>
+                <li>1 resposta</li>
+              </ul>
+            </li>
+          </ul>    
+
+          <ul class="ul">
+            <li id="assunto-pergunta">Assunto da pergunta aparece aqui</li>
+            <li id="autor">Carlos Henrique Santos</li>
+            <li>
+              <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
+            </li>
+            <li>
+              <ul id="likes-respostas">
+                <li><img src="./img/list.png" alt="list icon" id="list-icon"></li>
+                <li><img src="./img/heart.png" alt="heart icon"></li>
+                <li>1 like</li>
+                <li>1 resposta</li>
+              </ul>
+            </li>
+          </ul> 
+
+        </section>        
+
+      </section>
+
+
+
+
     </main>
 
-
+    <!--Footer do site-->
     <footer>
+    
       <div id="foot-container">
         <img src="./img/Galoá.png" alt="" id="foto-galoa">
         
@@ -274,8 +274,8 @@
         </div>
 
       </div>
-    </footer>
-
+    </footer>    
+    
     <script src="./js/script.js"></script>
   </body>
 </html>

@@ -8,23 +8,29 @@
   box-sizing: border-box;
 }
 
+body{
+  height: 215vh;
+  width: 100vw;
+}
 
-
-/*Barra de navegação lateral*/
-#nav-bar{
+/*Barra lateral*/
+#nav-bar-container{
   font-family: 'Roboto', sans-serif;
-  width: 220px;
-  height: 2508px;
-  position: absolute;
-  left: 0%;
-  top: 0%;
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);  
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
 }
 /*div onde guarda titulo Principal*/
 #slaca-2019{
-  width: 220px;
+  width: 400px;
   height: 68px;
+  position: fixed;
+  left: 0%;
   background: linear-gradient(#FFB354,#EE7A3A);
   text-align: center;
 }
@@ -34,16 +40,25 @@
   color: white;
   font-weight: bolder;
 }
-
-
+/*imagem slaca*/
+#slaca-imagem{
+  position: fixed;
+  left: 5%;
+  margin-top: 5%;
+}
 
 /*Links de navegação barra esquerda*/
 #main-navigation{
+  /*layout original
   width: 220px;
+  */
+  width: 400px;
   height: 223px;
   font-family: 'Quicksand', sans-serif;
+  position: fixed;
+  top: 45%;
 }
-
+/*Lista link de navegação*/
 #main-navigation ul {
   list-style-type: none;
   line-height: 32px;
@@ -52,11 +67,12 @@
   font-size: 15px;
   padding: 7px 97px 7px 0px;
 }
+/*Itens links de navegação*/
 #main-navigation ul li{
-  width: 220px;
+  width: 400px;
   height: 33px;
   box-shadow: 0px 1px rgba(107, 107, 107, 0.25);   /* 0px ? 1px bottom*/
-  padding-left: 32px;
+  padding-left: 42px;
 }
 
 /*Barrinha laranja nos links*/
@@ -69,6 +85,7 @@
   display: none;
 }
 
+/*Efeito após passar mouse nos links*/
 #main-navigation ul li:hover {
   background-color: #FDF1EB;
   cursor: pointer;
@@ -79,30 +96,32 @@
 }
 
 
-/*head da página*/
+
+
+/*Header da página*/
 #head-principal{
   font-family: 'Roboto', sans-serif;
   width: 100%;
   height: 68px;
   display: flex;
-  flex-direction: column;
-  background-color: #FDF1EB;;
-  position: absolute;
-  left: 220px;
-  top: 0%;
-  padding: 5px 467px 4px 36px;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-left: 26%;
+  background-color: #FDF1EB;
 }
+/*Principal titulo*/
 #head-principal h1 {
   font-size: 22px;
   font-weight: 400;
   color: #725C5C;
 }
-
+/*Paragrafo do titulo*/
 #head-principal p{
   color: #725C5C;
   font-size: 14px;
   font-weight: 400;
 }
+/*ISSN 123...*/
 #head-principal span {
   color: #725C5C;
   font-size: 14px;
@@ -117,50 +136,58 @@
   font-weight: 600;
   font-family: 'Quicksand', sans-serif;
   padding: 8px 24px 8px 31px;
-  border: 1px solid #FDF1EB;
+  border: 1px solid #bebebe;
+  background-color: #FDF1EB;
   border-radius: 3px;
   position: absolute;
   top: 17px;
-  left:789px;
+  left: 72%;
   display: flex;
   justify-content: center;
   cursor: pointer;
 }
 
-/* Usuario header onde fica foto e email*/
+/* Usuario header onde fica foto e email CONTAINER*/
 .usuario-header{
   font-family: 'Quicksand', sans-serif;
-  font-weight: 600;
   font-size: 14px;
   line-height: 17.5px;
   width: 202px;
   height: 34px;
-  position: absolute;
-  top: 17%;
-  left: 908px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  padding-left: 21%;
+  line-height: 18px;
+  margin-top: 13px;
 }
-
-#bem-vindo {
-  padding-left: 110px;
-  padding-bottom: 2px;
+/*Lista que acopla email*/
+.usuario-header ul {
+  list-style-type: none;
+  font-weight: 600;
 }
+/*Foto usuario*/
 #photo-usuario{
   position: absolute;
-  top: 0px;
-  left: 188px;
+  left: 92%;
+  top: 1%;
+}
+/*Palavra bem vindo*/
+#bem-vindo{
+  padding-left: 62%;
 }
 
 
-/*Container Navegação principal da pagina*/
-#navegacao-principal{
+
+
+/*Container principal da pagina*/
+#navegacao-principal {
+  /*layout original
   width: 1120px;
-  height: 1753px;
-  /*border: 1px solid #000;*/
-  position: absolute;
-  top: 88px;
-  left: 263px;
+  */
+  width: 1220px;
+  border: 1px solid #548;
+  margin-left: 26%;
+  height: 100%;
   word-wrap: break-word;
 }
 
@@ -174,18 +201,104 @@
   line-height: 30px;
   letter-spacing: 5%;
   color: #ED7839;
-  margin-top: 20px;
+  padding-top: 20px;
+  margin-left: 0%;
+
 }
 
 /*Video que seria colocado na página*/
 #video-img{
   width: 783px;
   height: 439px;
-  position: absolute;
-  top: 120px;
-  left: 2px;
   border-radius: 3px;
+  margin-top: 49px;
 }
+
+
+/*Container dos botoes*/
+#botoes-container{
+  width: 200px;
+  height: 40px;
+  margin-left: 75%;
+  margin-top: -2.1%;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/*Botoes principais do site do noticia*/
+#download{
+  width: 120px;
+  height: 31px;
+  background-color: #ED7839;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 11px;
+  margin-right: 10px;
+}
+#download:hover {
+  background-color: #ff9c67;
+  cursor: pointer;
+}
+/*Botão estrela*/
+#estrela {
+  width: 43px;
+  height: 31px;
+  background-color: #ED7839;
+  border-radius: 4px;
+  border: none;
+  margin-right: 10px;
+  padding: 5px;
+}
+#estrela:hover {
+  background-color: #ff9c67;
+  cursor: pointer;
+}
+
+/*Botão doi*/
+#doi {
+  width: 43px;
+  height: 31px;
+  background-color: #ED7839;
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+  text-align: center;
+}
+#doi:hover {
+  background-color: #ff9c67;
+  cursor: pointer;
+}
+
+/*Link citação do trabalho*/
+#link-citacao{
+  width: 280px;
+  height: 25px;
+  text-align: center;
+  margin-top: 80px;
+  margin-left: -40px;
+  position: absolute;
+  letter-spacing: 5%;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #ED7839;
+  text-decoration: none;
+  line-height: 25px;
+}
+
+#link-citacao:hover {
+  color: #ff9c67;
+  cursor: pointer;
+}
+
 
 
 /*Container Detalhes da noticia*/
@@ -193,12 +306,18 @@
   font-family: 'Roboto', sans-serif;
   width: 242px;
   height: 439px;
-  position: absolute;
-  top: 208px;
-  left: 1090px;
+  /*position: absolute;
+  top: 148px;
+  left: 840px;
+  */
+  display: flex;
+  flex-direction: column;
+  
   border: 1px solid rgba(160, 160, 160, 0.267);
   overflow: scroll;
   overflow-x: hidden;
+  margin-left: 73%;
+  margin-top: 4.5%;
 }
 /*Barra de navegação da div*/
 #detalhes::-webkit-scrollbar{
@@ -254,105 +373,22 @@
   margin-top: 30px;
 }
 
-/*Container dos botoes*/
-#botoes-container{
-  position: absolute;
-  top: 13%;
-}
-
-/*Botoes principais do site do noticia*/
-#download{
-  width: 120px;
-  height: 31px;
-  position: absolute;
-  left: 1102px;
-  top: 15%;
-  background-color: #ED7839;
-  border-radius: 4px;
-  border: none;
-  color: white;
-  font-weight: 500;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-left: 11px;
-  padding-top: 5px;
-}
-#download:hover {
-  background-color: #ff9c67;
-  cursor: pointer;
-}
-/*Botão estrela*/
-#estrela {
-  width: 43px;
-  height: 31px;
-  position: absolute;
-  left: 1230px;
-  top: 15%;
-  background-color: #ED7839;
-  border-radius: 4px;
-  border: none;
-}
-#estrela:hover {
-  background-color: #ff9c67;
-  cursor: pointer;
-}
-
-/*Botão doi*/
-#doi {
-  width: 43px;
-  height: 31px;
-  position: absolute;
-  left: 1280px;
-  top: 15%;
-  background-color: #ED7839;
-  border: none;
-  border-radius: 4px;
-}
-#doi:hover {
-  background-color: #ff9c67;
-  cursor: pointer;
-}
-
-/*Link citação do trabalho*/
-#link-citacao{
-  width: 239px;
-  height: 25px;
-  line-height: 25px;
-  position: absolute;
-  left: 1105px;
-  margin-top: 50px;
-}
-#link-citacao a {
-  letter-spacing: 5%;
-  font-size: 14px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  color: #ED7839;
-  text-decoration: none;
-}
-
-#link-citacao a:hover {
-  color: #ff9c67;
-  cursor: pointer;
-}
 
 
 /*Resumo noticia principal*/
 #container-resumo{
   font-family: 'Roboto', sans-serif;
-  width: 1058px;
+  width: 1130px;
   height: 200px;
-  position: absolute;
-  top: 80%;
-  left: 16.5%;
   border: 1px solid #c7c7c7;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-/*Resumo tag h2*/
+/*Resumo tag h3*/
 #resumo-noticia{
-  width: 1058px;
+  width: 100%;
   height: 45px;
   background-color: #FDF1EB;
   color: #4E4E4E;
@@ -395,17 +431,17 @@
 
 /*    Discussões container    */
 #discussoes-container{
-  width: 1058px;
-  height: 651px;
-  position: absolute;
-  left: 16.6%;
-  top: 160%;
-  border: 1px solid #c7c7c7;
+  font-family: 'Roboto', sans-serif;
 
+  width: 1130px;
+  height: 640px;
+  border: 1px solid #c7c7c7;
+  margin-top: 40px;
   /*Centralizei todos os elementos com flex*/
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 
@@ -415,7 +451,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 45px;
-  width: 1058px;
+  width: 100%;
   height: 45px;
   background-color: #FDF1EB;
   color: #4E4E4E;
@@ -432,7 +468,6 @@
   text-align: center;
   height: 22px;
   margin-top: 15px;
-  
 }
 /*Paragrafo de discussao*/
 #paragrafo-discussao{
@@ -449,6 +484,7 @@
   height: 40px;
   background: linear-gradient(#FEB254, #F0813D);
   text-align: center;
+  border: none;
 }
 #btn-criar-topico span {
   color: white;
@@ -462,50 +498,57 @@
 #btn-criar-topico:hover{
   background: linear-gradient(#ffbb68, #ff9d60);
   cursor: pointer;
+  
+}
+
+hr{
+  width: 65em;
+  margin-top: 3px;
 }
 
 
-
-
-
-/*Área de discussões com CRUD*/
+/*          Área de discussões com CRUD         */
 #container-divs{
-  border: 1px solid #E7E7E7;
   border-radius: 4px;
-  width: 1028px;
+  width: 1110px;
   height: 148px;
-  position: absolute;
-  top: 142%;
-  left: 17.5%;
+  margin-left: 1%;
+  margin-top: 2%;
 }
-#div-1,
-#div-2{
+.ul{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 10px;
-  padding-left: 25px;
+  padding-left: 15px;
   font-family: 'Quicksand', sans-serif;
-  margin-top: 3px;
-}
-#div-2{
-  border: 1px solid #E7E7E7;
-}
-
-/*Botões de likes e resposta na lista*/
-#likes-respostas ul{
   list-style-type: none;
-  margin-top: 20px;
+  border: 1px solid #55555542;
+  margin-top: 2%;
+
+}
+/*Botões de like*/
+.ul ul{
+  list-style-type: none;
   display: flex;
   flex-direction: row;
-}
-#likes-respostas ul li {
-  padding: 10px;
+  padding-top: 15px;
+  margin-left: -10px;
+  align-items: flex-start;
 }
 
-/*Icones e caixa de perguntas*/
-#list-icon{
+.ul ul li {
+  margin-left: 5px;
+  margin-right: 5px;
 }
+.ul li p {
+  padding-top: 10px;
+}
+#autor{
+  padding-top: 2px;
+}
+
+
 
 #assunto-pergunta{
   font-family: 'Quicksand', sans-serif;
@@ -514,7 +557,8 @@
   height: 20px;
   color: #ED7839;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 10px;
+  padding-top: 4px;
 }
 #autor{
   color: #5C5C5C;
@@ -525,40 +569,21 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 /*Footer*/
 #foot-container{
   font-family: 'Quicksand', sans-serif;
   width: 1086px;
   height: 181px;
-  position: absolute;
-  bottom: 0%;
-  left: 263px;
   display: flex;
   align-items: center;
+  margin-top: 6%;
+  margin-left: 25%;
+
 }
 #div-text p{
   padding: 7px;
   font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
 
 
 
