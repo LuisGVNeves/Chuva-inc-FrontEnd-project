@@ -1,4 +1,9 @@
+// Container das respostas que vão sendo criadas precisam ficar rebaixado
+let container_divs = document.querySelector('#container-divs');
+
+
 window.addEventListener('load', function(){
+  
 
   // # funcao mostrarParagrafos ao clicar, vai aparecer os paragrafos
   mostrarParagrafos();
@@ -29,6 +34,8 @@ function mostrarParagrafos() {
     let container_resumo = document.querySelector('#container-resumo');
     container_resumo.style.height = '650px'; 
 
+    // Adicionando a classe containerDivVerMais pro container de respostas descer
+    container_divs.id = 'container-divsVerMais';
     
     // Parando a propagação de eventos
     e.stopPropagation();
@@ -49,6 +56,8 @@ function ocultarParagrafos(){
   let container_resumo = document.querySelector('#container-resumo');
   container_resumo.style.height = '200px'; 
 
+  // Adicionando a classe containerDivVerMais pro container de respostas descer
+  container_divs.id = 'container-divs';
   
 }
 
@@ -69,250 +78,262 @@ function adicionarDiv(){
 
   btn_criar_topico.addEventListener('click', function(e){
 
-    // Area que precisa desaparecer quando botão de criar tópico for criado
+    /*
+      1 Parte
+      - Ao clicar no botão Criar Tópico, toda a área que contém as frases
+        "compartilhe suas ideias ou dúvidas com autores"
+        "Sabia que o maior estimulo .. "
+        imagens referentes ao post
+        e o próprio botão de criar tópico precisa desaparecer.
+    */ 
     let compartilhe_ideias = document.querySelector("#compartilhe-ideias");
     let imagens_autores = document.querySelector("#imagens-autores");
     let paragrafo_discussao = document.querySelector("#paragrafo-discussao");
-
-    // Desaparecendo com a área
     compartilhe_ideias.style.display = 'none';
     imagens_autores.style.display = 'none';
     paragrafo_discussao.style.display = 'none';
     btn_criar_topico.style.display = 'none';
 
 
-    // # Áreas que precisam aparecer
+    /*
+      2 parte
+      - Assim que desaparecer, algumas áreas precisam apararecer como o paragrafo:
+      "Tem uma dúvida ou sugestão?"
+      "Assunto" com input
+      "Conteúdo" com input
+      bold + italic
+      botão de enviar
+    */
     
     // Esse container vai servir apenas para colocar as tags criadas
     let discussoes_container = document.querySelector('#discussoes-container');
 
-    // Container das respostas que vão sendo criadas precisam ficar rebaixado
-    let container_divs = document.querySelector('#container-divs');
-    container_divs.style.marginTop = '25%';
+   
 
-    // Paragrafo adicionado
-    let p = document.createElement('p');
-    p.innerText = 'Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!';
-    p.style.position = 'absolute';
-    p.style.marginTop = '3%';
-    discussoes_container.appendChild(p);
+    // Paragrafo Tem uma dúvida ou sugestão? 
+    let paragrafoSugestao = document.createElement('p');
+    paragrafoSugestao.innerText = 'Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!';
+    paragrafoSugestao.style.position = 'absolute';
+    paragrafoSugestao.style.marginTop = '4%';
+    paragrafoSugestao.style.width = '965.37px';
+    paragrafoSugestao.style.height = '18px';
+    paragrafoSugestao.style.textAlign = 'center';
+    paragrafoSugestao.style.fontFamily = 'Quicksand';
+    discussoes_container.appendChild(paragrafoSugestao);
 
-    // H3 Assunto adicionado
-    let h3 = document.createElement('h3');
-    h3.innerText = 'Assunto';
-    h3.style.position = 'absolute';
-    h3.style.marginTop = '5%';
-    h3.style.marginLeft = '-61%';
-    h3.style.color = '#ED7839';
-    discussoes_container.appendChild(h3);
+    // H3 Assunto 
+    let h3Assunto = document.createElement('h3');
+    h3Assunto.innerText = 'Assunto';
+    h3Assunto.style.marginTop = '3.1%';
+    h3Assunto.style.marginLeft = '-90%';
+    h3Assunto.style.color = '#ED7839';
+    discussoes_container.appendChild(h3Assunto);
 
 
-    // SPAN sobre assunto a ser enviado
-    let spanAssunto = document.createElement('span');
-    spanAssunto.style.width = '1090px';
-    spanAssunto.style.height = '39px';
-    spanAssunto.style.border = '1px solid #CCC';
-    spanAssunto.style.marginTop = '7%';
-    spanAssunto.style.position = 'absolute';
-    spanAssunto.innerText = 'Defina um tópico para notificas os autores..';
-    spanAssunto.style.color = "#4D4D4D";
-    spanAssunto.contentEditable = 'true';
-    spanAssunto.style.textAlign = 'start';
-    spanAssunto.style.lineHeight = '39px';
-    spanAssunto.style.fontWeight = '500';
-    spanAssunto.style.fontSize = '14px';
-    spanAssunto.style.paddingLeft = '22px';
-    discussoes_container.appendChild(spanAssunto);
+    // INPUT sobre assunto a ser enviado
+    let inputAssunto = document.createElement('input');
+    inputAssunto.style.width = '1090px';
+    inputAssunto.style.height = '39px';
+    inputAssunto.style.border = '1px solid #CCC';
+    inputAssunto.value = 'Defina um tópico para notificar os autores..';
+    inputAssunto.style.color = "#4D4D4D";
+    inputAssunto.contentEditable = 'true';
+    inputAssunto.style.textAlign = 'start';
+    inputAssunto.style.lineHeight = '39px';
+    inputAssunto.style.fontWeight = '500';
+    inputAssunto.style.fontSize = '14px';
+    inputAssunto.style.paddingLeft = '22px';
+    discussoes_container.appendChild(inputAssunto);
+    // Assim que o input assunto for clicado, quero limpar o input
+    inputAssunto.addEventListener('click', () =>{
+      inputAssunto.value = '';
+    })
 
-    // H3 Palavra escrita conteudo adicionado
+
+    // H3 Palavra escrita conteudo 
     let h3_conteudo = document.createElement('h3');
     h3_conteudo.innerText = 'Conteúdo';
-    h3_conteudo.style.position = 'absolute';
-    h3_conteudo.style.marginTop = '10.2%';
-    h3_conteudo.style.marginLeft = '-61%';
+    h3_conteudo.style.marginTop = '3.1%';
+    h3_conteudo.style.marginLeft = '-89%';
     h3_conteudo.style.color = '#ED7839';
     discussoes_container.appendChild(h3_conteudo);
-
-    // SPAN sobre assunto {Input} a ser enviado
-    let spanConteudo = document.createElement('span');
-    spanConteudo.style.width = '1090px';
-    spanConteudo.style.height = '113px';
-    spanConteudo.style.border = '1px solid #CCC';
-    spanConteudo.style.marginTop = '12%';
-    spanConteudo.style.position = 'absolute';
-    spanConteudo.style.color = '#4D4D4D';
-    spanConteudo.contentEditable = 'true';
-    spanConteudo.style.textAlign = 'start';
-    spanConteudo.style.lineHeight = '39px';
-    spanConteudo.style.fontWeight = '500';
-    spanConteudo.style.fontSize = '14px';
-    spanConteudo.style.paddingLeft = '22px';
-    // Remover borda do input quando clicado
-    spanConteudo.style.outline = '0px';
-
-      // Criando span pra acoplar as imagens B de bold
-      let bSpan = document.createElement('span');
-      
-      // Tag <img> que vai receber a imagem de bold
-      let imgBold = document.createElement('img');
-      imgBold.setAttribute('src','/img/bold.png')
-
-      // Adicionando a tag <imgBold> que já tem a imagem bold, dentro da tag span
-      bSpan.appendChild(imgBold)
-
-      // # Setei o background de span e alinhei ele pra ficar certinho dentro do discussões container
-      bSpan.style.background = '#EAF1F2';
-      bSpan.style.marginTop = '16.8%';
-      bSpan.style.position = 'absolute';
-      bSpan.style.left = '27.6%';
-      bSpan.style.width = '884.9px';
-      bSpan.style.height = '31px';
-      bSpan.style.lineHeight = '36px';
-      
-      /*
-      - Alinhei a imagem bold pra ficar no lado esquerdo e coloquei um escutador para que 
-      quando fosse clicado, o texto do input ficasse bold
-      */
-     imgBold.style.marginLeft = '-780px';
-     imgBold.style.cursor = 'pointer';
-     imgBold.style.paddingRight = '3%'
-      imgBold.addEventListener('click', function(){
-        spanConteudo.style.fontWeight = 'bold';
-      })
-
-      
-      
-      
-      // Vou adicionar agora a <img> italico
-      let imgItalico = document.createElement('img');
-      imgItalico.setAttribute('src','/img/italic.png')
-      
-      // Adicionando a tag <imgItalico> que já tem a imagem italico, dentro da tag span
-      bSpan.appendChild(imgItalico);
-
-      // Adicionando efeito de cursor no italic
-      imgItalico.style.cursor = 'pointer';
-
-      // # Fazer o mesmo processo de escutar a tag italico e adicionar efeito italico
-      imgItalico.addEventListener('click', function(){
-        spanConteudo.style.fontStyle = 'italic';
-      })
-
-
-    // Adicionei o {input} que o usuário vai digitar dentro do container  
-    discussoes_container.appendChild(spanConteudo);
     
-    // Adicionei a tag <span> que contém <img Bold e Italic> dentro do discussões container
-    discussoes_container.appendChild(bSpan);
 
 
 
-    // Criação do botão para enviar o tópico
-    let buttonEnviarTopico = document.createElement('button');
-    buttonEnviarTopico.innerText = 'Enviar';
-    buttonEnviarTopico.style.textAlign = 'center';
-    buttonEnviarTopico.style.background = 'linear-gradient(#FEB154, #F1833E)';
-    buttonEnviarTopico.style.position = 'absolute';
-    buttonEnviarTopico.style.top = '135%';
-    buttonEnviarTopico.style.left = '80.7%';
-    buttonEnviarTopico.style.width = '205px';
-    buttonEnviarTopico.style.height = '31px';
-    buttonEnviarTopico.style.border = 'none';
-    buttonEnviarTopico.style.color = '#FFF';
-    buttonEnviarTopico.style.backgroundHover = '#000';
-    buttonEnviarTopico.style.cursor = 'pointer';
+    // INPUT sobre CONTEUDO a ser enviado
+    let inputConteudo = document.getElementById('inputConteudo');
+    inputConteudo.classList.remove('hidden');
+    inputConteudo.style.width = '1090px';
+    inputConteudo.style.height = '113px';
+    inputConteudo.style.border = '1px solid #CCC';
+    inputConteudo.style.color = '#4D4D4D';
+    inputConteudo.style.marginTop = '-38%';
+    inputConteudo.style.marginLeft = '1.2%';
+    inputConteudo.style.position = 'absolute';
+    inputConteudo.contentEditable = 'true';
+    inputConteudo.style.textAlign = 'start';
+    inputConteudo.style.lineHeight = '39px';
+    inputConteudo.style.fontWeight = '500';
+    inputConteudo.style.fontSize = '14px';
+    inputConteudo.style.paddingLeft = '22px';
+    inputConteudo.style.outline = '0px'; // Remover borda do input quando clicado
 
-    discussoes_container.appendChild(buttonEnviarTopico);
+
+
+    // Bold
+    let bold = document.getElementById('bold');
+    bold.addEventListener('click', function(){
+      inputConteudo.style.fontWeight = 'bold';
+    })
+    
+    // Italic
+    let italic = document.getElementById('italic');
+    italic.addEventListener('click', function(){
+      inputConteudo.style.fontStyle = 'italic';
+    })
+
+
+
+
+    // #### Criação do botão para enviar o tópico
+    let buttonEnviar = document.createElement('button');
+    buttonEnviar.innerText = 'Enviar';
+    buttonEnviar.style.width = '205px';
+    buttonEnviar.style.height  = '31px';
+    buttonEnviar.style.lineHeight  = '31px';
+    buttonEnviar.style.border = 'none';
+    buttonEnviar.style.color = '#fff';
+    buttonEnviar.style.display = 'flex';
+    buttonEnviar.style.flexDirection = 'column';
+    buttonEnviar.style.alignItems = 'center';
+    buttonEnviar.style.background = 'linear-gradient(#FEB154, #F1833E)';
+    buttonEnviar.style.cursor = 'pointer';
+    buttonEnviar.style.position = 'absolute';
+
+
+
+    // Colocando botão de enviar na div principal
+    discussoes_container.appendChild(buttonEnviar);
   
+
+
+
 
     // # Ao clicar no botão de enviar, os elementos precisam ser criados
-    buttonEnviarTopico.addEventListener('click', function(e){
-      let contadorClick = e.target.value;
+    buttonEnviar.addEventListener('click', function(e){
 
-      for(let i=0; i <= contadorClick; i++){
-        // A cada clique do botão enviar, vai ser criado a estrutura
+    // A cada clique do botão enviar, vai ser criado a estrutura
+    for(let i=0; i < 1; i++){
+      // # Criação do <ul>
+      let ul = document.createElement('ul');
 
-        // # Criação do <ul>
-        let ul = document.createElement('ul');
+      // # Adicionando a classe ul na tag <ul> para pegar a estilização
+      ul.classList.add('ul');
 
-        // # Adicionando a classe ul na tag <ul> para pegar a estilização
-        ul.classList.add('ul');
-
-        // # Criando <li> pra guardar o titulo do assunto do usuário
-        let li_Assunto = document.createElement('li');
+      // # Criando <li> pra guardar o titulo do assunto do usuário
+      let li_Assunto = document.createElement('li');
 
 
-        // # Adicionando id #assunto-pergunta 
-        li_Assunto.id = 'assunto-pergunta';
-        
+      // # Adicionando id #assunto-pergunta 
+      li_Assunto.id = 'assunto-pergunta';
+      
 
-        // # Guardando o valor do input do usuário dentro da minha li
-        li_Assunto.innerText += spanAssunto.innerText; 
-
-
-        // # Criando <li> para guardar o autor da mensagem
-        let li_autor = document.createElement('li');
-        li_autor.id = 'autor';
-        /*
-          Como eu não tenho um campo para o valor do autor do texto, vou criar um autor aleatorio
-          com a biblioteca matematica
-        */
-        li_autor.innerHTML += `UsuarioAnonimo ${Math.floor(Math.random() * 100)}`;
-        
+      // # Guardando o valor do input do usuário dentro da minha li
+      li_Assunto.innerText += spanAssunto.innerText; 
 
 
-        // # Criando <li> para colocar o comecinho da pergunta
-        let li_comecinhoPergunta = document.createElement('li');
-
-        // ID que vai ficar o comecinho da pergunta
-        let comecinho_Pergunta = document.querySelector('#comecinho-Pergunta');
-
-        // Limpando comecinho_Pergunta
-        comecinho_Pergunta.innerText = '';
-
-        // Vou colocar o começo do assunto que o usuário escreve
-        comecinho_Pergunta.innerText += spanConteudo.innerText;
+      // # Criando <li> para guardar o autor da mensagem
+      let li_autor = document.createElement('li');
+      li_autor.id = 'autor';
+      /*
+        Como eu não tenho um campo para o valor do autor do texto, vou criar um autor aleatorio
+        com a biblioteca matematica
+      */
+      li_autor.innerHTML += `UsuarioAnonimo ${Math.floor(Math.random() * 100)}`;
+      
 
 
-        // Agora vou adicionar na tag <li>
-        li_comecinhoPergunta.append(comecinho_Pergunta);
+      // # Criando <li> para colocar o comecinho da pergunta
+      let li_comecinhoPergunta = document.createElement('li');
+
+      // ID que vai ficar o comecinho da pergunta
+      let comecinho_Pergunta = document.querySelector('#comecinho-Pergunta');
+
+      // Limpando comecinho_Pergunta
+      comecinho_Pergunta.innerText = '';
+
+      // Vou colocar o começo do assunto que o usuário escreve
+      comecinho_Pergunta.innerText += spanConteudo.innerText;
 
 
-        // Montando toda a estrutura 
-        ul.appendChild(li_Assunto);
-        ul.appendChild(li_autor);
-        ul.appendChild(li_comecinhoPergunta);
+      // Agora vou adicionar na tag <li>
+      li_comecinhoPergunta.append(comecinho_Pergunta);
 
-        console.log(ul);
-       
-      }
 
-    })
-  
-  
+      // Última <li> pra colocar na <ul> principal
+      let li_icons = document.createElement('li');
 
+      // Esta lista é responsável por agrupar os <li's> que tem imagens do coração e de lista, e de like
+      let ul_likes = document.createElement('ul');
+      ul_likes.id = 'likes-respostas';
+
+
+      // Icone de lista
+      let imgList = document.createElement('img');
+      imgList.setAttribute('src','/img/list.png');
+      imgList.id = 'list-icon';
+
+      // Adicionando dentro de <li> a imagem com icone
+      let li_imgList = document.createElement('li');
+      li_imgList.appendChild(imgList)
+
+
+      // Adicionando dentro do <ul> likes
+      ul_likes.appendChild(imgList);
+
+
+      // <li> principal pegando o <ul> que carrega os icones
+      li_icons.appendChild(ul_likes);
+
+
+      // # Criando Coração da lista
+      let coracaoImg = document.createElement('img');
+      coracaoImg.setAttribute('src','/img/heart.png');
+
+      // Adicionando dentro de <li> a imagem com coracao
+      let li_imgCoracao = document.createElement('li');
+      li_imgCoracao.appendChild(coracaoImg)
+
+
+      // Adicionando dentro do <ul> likes
+      ul_likes.appendChild(coracaoImg);
+
+
+      // # Botões de like e resposta
+      let like = document.getElementById('like');
+      let liLike = document.createElement('li');
+      liLike.appendChild(like);
+      
+      // Adicionando dentro do <ul> likes
+      ul_likes.appendChild(liLike);
+
+
+
+      // Montando toda a estrutura 
+      ul.appendChild(li_Assunto);
+      ul.appendChild(li_autor);
+      ul.appendChild(li_comecinhoPergunta);
+      ul.appendChild(li_icons);
+    }
 
 
   })
   
+
+})
+  
 }
-
-/*
-
-  <li>
-    <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
-  </li>
-
-  <li>
-    <ul id="likes-respostas">
-      <li><img src="./img/list.png" alt="list icon" id="list-icon"></li>
-      <li><img src="./img/heart.png" alt="heart icon"></li>
-      <li>1 like</li>
-      <li>1 resposta</li>
-    </ul>
-  </li>
-
-*/
 
 
 

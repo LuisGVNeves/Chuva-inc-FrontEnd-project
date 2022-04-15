@@ -9,7 +9,7 @@
 }
 
 body{
-  height: 215vh;
+  height: 200vh;
   width: 100vw;
 }
 
@@ -185,7 +185,6 @@ body{
   width: 1120px;
   */
   width: 1220px;
-  border: 1px solid #548;
   margin-left: 26%;
   height: 100%;
   word-wrap: break-word;
@@ -432,16 +431,14 @@ body{
 /*    Discussões container    */
 #discussoes-container{
   font-family: 'Roboto', sans-serif;
-
   width: 1130px;
-  height: 640px;
+  height: 840px;
   border: 1px solid #c7c7c7;
-  margin-top: 40px;
+  margin-top: 50px;
   /*Centralizei todos os elementos com flex*/
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 }
 
 
@@ -468,7 +465,9 @@ body{
   text-align: center;
   height: 22px;
   margin-top: 15px;
+
 }
+
 /*Paragrafo de discussao*/
 #paragrafo-discussao{
   font-family: 'Quicksand', sans-serif;
@@ -485,11 +484,16 @@ body{
   background: linear-gradient(#FEB254, #F0813D);
   text-align: center;
   border: none;
+  box-sizing: content-box;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
 }
 #btn-criar-topico span {
   color: white;
   padding-right: 5px;
-  padding-bottom: 17px;
+  padding-bottom: 30px;
 }
 #plus{
   height: 17px;
@@ -498,23 +502,33 @@ body{
 #btn-criar-topico:hover{
   background: linear-gradient(#ffbb68, #ff9d60);
   cursor: pointer;
-  
-}
-
-hr{
-  width: 65em;
-  margin-top: 3px;
 }
 
 
-/*          Área de discussões com CRUD         */
+
+
+/*          Área de discussões com CRUD onde tem likes e coração        */
 #container-divs{
   border-radius: 4px;
-  width: 1110px;
-  height: 148px;
-  margin-left: 1%;
-  margin-top: 2%;
+  width: 1090px;
+  height: 158px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 27.1%;
+  margin-top: -36.6%;
 }
+/*Estilização do container após clicar em ver mais*/
+#container-divsVerMais{
+  margin-top: -10%;
+  margin-left: 27.1%;
+  width: 1090px;
+  height: 158px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+}
+
+
 .ul{
   display: flex;
   flex-direction: column;
@@ -527,6 +541,10 @@ hr{
   margin-top: 2%;
 
 }
+#autor{
+  margin-top: 3px;
+}
+
 /*Botões de like*/
 .ul ul{
   list-style-type: none;
@@ -542,11 +560,274 @@ hr{
   margin-right: 5px;
 }
 .ul li p {
-  padding-top: 10px;
+  margin-top: 15px;
 }
 #autor{
   padding-top: 2px;
 }
+
+
+
+/*Assunto do paragrafo*/
+#assunto-pergunta{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  width: 267px;
+  height: 20px;
+  color: #ED7839;
+  font-size: 16px;
+  line-height: 10px;
+  padding-top: 8px;
+}
+#autor{
+  color: #5C5C5C;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+
+
+/*Footer*/
+#foot-container{
+  font-family: 'Quicksand', sans-serif;
+  width: 1086px;
+  height: 181px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin-left: 28%;
+  margin-top: 25%;
+
+}
+#div-text p{
+  padding: 7px;
+  font-weight: 500;
+}
+
+
+
+.blur{
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+  width: 100%;
+  height: 100px;
+}
+.hidden{
+  display: none;
+}
+#editar-topico{
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 600px) {
+  /*Barra lateral*/
+  #nav-bar-container{
+    width: 300px;
+  }
+  /*div onde guarda titulo Principal*/
+  #slaca-2019{
+    width: 300px;
+  }
+  
+  /*imagem slaca*/
+  #slaca-imagem{
+    left: 5%;
+    margin-top: 15%;
+  }
+
+  /*Links de navegação barra esquerda*/
+  #main-navigation{
+    width: 300px;
+  }
+  /*Itens links de navegação*/
+  #main-navigation ul li{
+    width: 300px;
+  }
+}
+
+/*Laptop*/
+@media (max-width: 1440px) {
+  /*Barra lateral*/
+  #nav-bar-container{
+    width: 300px;
+  }
+  /*div onde guarda titulo Principal*/
+  #slaca-2019{
+    width: 300px;
+  }
+  
+  /*imagem slaca*/
+  #slaca-imagem{
+    left: 2.6%;
+    margin-top: 5%;
+  }
+
+  /*Links de navegação barra esquerda*/
+  #main-navigation{
+    width: 300px;
+  }
+  /*Itens links de navegação*/
+  #main-navigation ul li{
+    width: 300px;
+  }
+
+
+  
+
+  /*Header da página*/
+  #head-principal{
+    padding-left: 23%;
+  }
+
+  /*Botão PT-BR*/
+  #botao-pt-br{
+    left: 70%;
+  }
+
+  /* Usuario header onde fica foto e email CONTAINER*/
+  .usuario-header{
+    padding-left: 15%;
+  }
+
+  /*Foto usuario*/
+  #photo-usuario{
+    left: 94%;
+  }
+  /*Palavra bem vindo*/
+  #bem-vindo{
+    padding-left: 62%;
+  }
+
+
+
+  /*Container principal da pagina*/
+  #navegacao-principal {
+    width: 1000px;
+    margin-left: 22.7%;
+    border: 1px solid #000;
+  }
+
+  /*Principal texto da página*/
+  #noticia-principal{
+    width: 686px;
+    height: 110px;
+    padding-top: 15px;
+  }
+
+  /*Video que seria colocado na página*/
+  #video-img{
+    width: 683px;
+    border-radius: 3px;
+    margin-top: 30px;
+  }
+
+
+  /*Container dos botoes*/
+  #botoes-container{
+    margin-top: -9%;
+  }
+
+
+  /*Link citação do trabalho*/
+  #link-citacao{
+    margin-top: 100px;
+  }
+
+  /*Container Detalhes da noticia*/
+  #detalhes{
+    margin-top: 7.5%;
+  }
+
+
+  /*Resumo noticia principal*/
+  #container-resumo{
+    width: 980px;
+  }
+  #verMais{
+    padding-left: 130px;
+    position: absolute;
+    top: 113.8%;
+  }
+
+  /*    Discussões container    */
+  #discussoes-container{
+    width: 980px;
+  }
+
+
+  /*Palavra dentro do botão*/
+  #discussoes-container #compartilhe-ideias {
+    display: flex;
+    justify-content: center;
+  }
+
+  /*Botão de criar tópico*/
+  #btn-criar-topico{
+    box-sizing: content-box;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    text-align: center;
+  }
+  #btn-criar-topico span {
+    padding-right: 5px;
+    padding-bottom: 30px;
+  }
+
+
+/*          Área de discussões com CRUD         */
+#container-divs{
+  border-radius: 4px;
+  width: 950px;
+  height: 158px;
+  margin-left: 1%;
+  margin-top: 0%;
+}
+
+.ul{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  padding-left: 15px;
+  font-family: 'Quicksand', sans-serif;
+  list-style-type: none;
+  border: 1px solid #55555542;
+  margin-top: 2%;
+
+}
+#autor{
+  margin-top: 3px;
+}
+
+/*Botões de like*/
+.ul ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding-top: 15px;
+  margin-left: -10px;
+  align-items: flex-start;
+}
+
+.ul ul li {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.ul li p {
+  margin-top: 15px;
+}
+#autor{
+  padding-top: 2px;
+}
+
 
 
 
@@ -558,7 +839,7 @@ hr{
   color: #ED7839;
   font-size: 16px;
   line-height: 10px;
-  padding-top: 4px;
+  padding-top: 8px;
 }
 #autor{
   color: #5C5C5C;
@@ -584,7 +865,4 @@ hr{
   padding: 7px;
   font-weight: 500;
 }
-
-
-
-
+}

@@ -205,11 +205,9 @@
         </div>
 
         <!--Area pra informar usuário para dar sugestões-->
-        <div id="paragrafo-discussao">
-          <p>
-            Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? <br> Deixe seus questionamentos ou sugestões para o autor !
-          </p>
-        </div>
+        <p id="paragrafo-discussao">
+          Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? <br> Deixe seus questionamentos ou sugestões para o autor !
+        </p>
 
         <!--Botão criar tópico-->
         <button id="btn-criar-topico">
@@ -217,50 +215,36 @@
           <span>Criar Tópico</span>
         </button>
         
-        
-        <!--Onde vai ficar tipo um CRUD-->
-        <section id="container-divs">
-
-          <ul class="ul">
-            <li id="assunto-pergunta">Assunto da pergunta aparece aqui</li>
-            <li id="autor">Carlos Henrique Santos</li>
-            <li>
-              <p id="comecinho-Pergunta">Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
-            </li>
-            <li>
-              <ul id="likes-respostas">
-                <li><img src="./img/list.png" alt="list icon" id="list-icon"></li>
-                <li><img src="./img/heart.png" alt="heart icon"></li>
-                <li>1 like</li>
-                <li>1 resposta</li>
-              </ul>
-            </li>
-          </ul>    
-
-          <ul class="ul">
-            <li id="assunto-pergunta">Assunto da pergunta aparece aqui</li>
-            <li id="autor">Carlos Henrique Santos</li>
-            <li>
-              <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
-            </li>
-            <li>
-              <ul id="likes-respostas">
-                <li><img src="./img/list.png" alt="list icon" id="list-icon"></li>
-                <li><img src="./img/heart.png" alt="heart icon"></li>
-                <li>1 like</li>
-                <li>1 resposta</li>
-              </ul>
-            </li>
-          </ul> 
-
-        </section>        
-
       </section>
-
-
-
-
+      
+    
+      <!--Input do conteudo que vou adicionar via JS-->
+      <span class="hidden" id="inputConteudo">
+        <img src="./img/bold.png" alt="img bold" id="bold">
+        <img src="./img/italic.png" alt="img bold" id="italic">
+      </span>
+      
     </main>
+
+    <!--Onde vai ficar tipo um CRUD-->
+    <section id="container-divs">
+      <ul class="ul" id="ul-1">
+        <li id="assunto-pergunta">Assunto da pergunta aparece aqui</li>
+        <li id="autor">Carlos Henrique Santos</li>
+        <li>
+          <p id="comecinho-Pergunta">Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
+        </li>
+        <li>
+          <ul id="likes-respostas">
+            <li><img src="./img/list.png" alt="list icon" id="list-icon"></li>
+            <li><img src="./img/heart.png" alt="heart icon"></li>
+            <li id="like">1 like</li>
+            <li id="resposta">1 resposta</li>
+          </ul>
+        </li>
+      </ul>   
+    </section> 
+
 
     <!--Footer do site-->
     <footer>
