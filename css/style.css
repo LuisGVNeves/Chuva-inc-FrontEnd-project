@@ -9,7 +9,7 @@
 }
 
 body{
-  height: 200vh;
+  height: 170vh;
   width: 100vw;
 }
 
@@ -442,6 +442,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 
@@ -510,27 +511,32 @@ body{
 
 
 
-/*          Área de discussões com CRUD onde tem likes e coração        */
+/*                          Área de discussões com CRUD onde tem likes e coração                   */
 #container-divs{
   border-radius: 4px;
   width: 1090px;
-  height: 158px;
+  height: 488px;
   display: flex;
   flex-direction: column;
   margin-left: 27.1%;
-  margin-top: -36.6%;
+  margin-top: -20.6%;
+  overflow: auto;
+}
+/*Barra de navegação da div*/
+#container-divs::-webkit-scrollbar{
+  height: 180px;
+  width: 4px;
+}
+/*Cor da barra*/
+#container-divs::-webkit-scrollbar-thumb {
+  border-radius: 15%;
+  background-color: #ff9047;
+}
+/*Cor do caminho*/
+#container-divs::-webkit-scrollbar-track {
+  background: #e0e0e0;       
 }
 
-/*Estilização do container após clicar em ver mais*/
-#container-divsVerMais{
-  margin-top: -10%;
-  margin-left: 27.1%;
-  width: 1090px;
-  height: 158px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 4px;
-}
 
 
 .ul{
@@ -543,7 +549,7 @@ body{
   list-style-type: none;
   border: 1px solid #55555542;
   margin-top: 2%;
-
+  
 }
 #autor{
   margin-top: 3px;
@@ -601,8 +607,7 @@ body{
   align-items: center;
   position: absolute;
   margin-left: 28%;
-  margin-top: 25%;
-
+  
 }
 #div-text p{
   padding: 7px;
@@ -730,5 +735,121 @@ body{
   position: absolute;
   left: 81.1%;
   display: block;
+}
+
+/*Estilização do container após clicar em ver mais*/
+#container-divsVerMais{
+  margin-top: 7%;
+  margin-left: 27.1%;
+  width: 1090px;
+  height: 488px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: auto;
+}
+/*Barra de navegação da div*/
+#container-divsVerMais::-webkit-scrollbar{
+  height: 180px;
+  width: 4px;
+}
+/*Cor da barra*/
+#container-divsVerMais::-webkit-scrollbar-thumb {
+  border-radius: 15%;
+  background-color: #ff9047;
+}
+/*Cor do caminho*/
+#container-divsVerMais::-webkit-scrollbar-track {
+  background: #e0e0e0;       
+}
+
+/*Mensagem que aparece quando topico for enviado*/
+#topico-enviado-container{
+  width: 1090px;
+  height: 330px;
+  position: absolute;
+  top: 110.5%;
+  left: 27.3%;
+  display: none;
+}
+#topicoSucesso{
+  width: 537px;
+  height: 22px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: 32%;
+  line-height: 22px;
+  color: #ED7839;
+}
+#topico-enviado-container p{
+  width: 1005px;
+  font-weight: 400;
+  margin-left: 4%;
+  margin-top: 2%;
+  color: #595959;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+#topico-enviado-container a{
+  width: 306px;
+  height: 20px;
+  font-weight: 500;
+  margin-top: 5%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  margin-left: 41%;
+  position: absolute;
+  color: #ED7839;
+
+}
+#topico-enviado-container button{
+  margin-top: 14%;
+  position: absolute;
+  margin-left: 38%;
+  width: 235.15px;
+  height: 32px;
+  border-radius: 4px;
+  background: linear-gradient(#FEB254,#F0813D);
+  text-align: center;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+#topico-enviado-container button:hover{
+  background: linear-gradient(#ffaa42,#ff7c2a);
+}
+
+
+/*Div que aparece de feedback quando usuario envia*/
+#aguardo-feedback{
+  width: 314px;
+  height: 200px;
+  position: absolute;
+  left: 47%;
+  top: 145%;
+  color:#707070;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#aguardo-feedback img {
+  position: absolute;
+  left: 45%;
+  top: 0;
+
+}
+#aguardo-feedback #editarTopico{
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  bottom: 1%;
 }
 

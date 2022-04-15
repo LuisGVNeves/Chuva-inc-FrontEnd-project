@@ -1,6 +1,12 @@
 // Container das respostas que vão sendo criadas precisam ficar rebaixado
 let container_divs = document.querySelector('#container-divs');
 
+// Container que guarda "Seu topico foi enviado com sucesso" 
+let topico_enviado_container = document.querySelector('#topico-enviado-container');
+
+// Feedback que aparece após enviar tópico
+let aguardo_feedback = document.getElementById('aguardo-feedback');
+
 
 window.addEventListener('load', function(){
   
@@ -13,6 +19,9 @@ window.addEventListener('load', function(){
 
   // # Função de adicionar divs, ao clicar no botão criar tópico
   adicionarDiv();
+  
+  // Escondendo div de feedback após usuario enviar topico
+  aguardo_feedback.style.display = 'none';
 })
 
 // #  Texto ver mais
@@ -36,6 +45,14 @@ function mostrarParagrafos() {
 
     // Adicionando a classe containerDivVerMais pro container de respostas descer
     container_divs.id = 'container-divsVerMais';
+
+    //Adicionando topico_enviado_container pro container de topico enviado descer
+    topico_enviado_container.style.top = '160%';
+
+    // Escondendo div de feedback após usuario enviar topico
+    aguardo_feedback.style.display = 'none';
+
+    
     
     // Parando a propagação de eventos
     e.stopPropagation();
@@ -58,6 +75,9 @@ function ocultarParagrafos(){
 
   // Adicionando a classe containerDivVerMais pro container de respostas descer
   container_divs.id = 'container-divs';
+
+  //Adicionando topico_enviado_container pro container de topico enviado descer
+  topico_enviado_container.style.top = '110.5%';
   
 }
 
@@ -141,8 +161,7 @@ function adicionarDiv(){
     h3_conteudo.id = 'h3_conteudo';
     discussoes_container.appendChild(h3_conteudo);
     
-
-
+    
 
     // INPUT sobre CONTEUDO a ser enviado
     let inputConteudo = document.getElementById('inputConteudo');
@@ -177,124 +196,194 @@ function adicionarDiv(){
 
 
 
-  
-
 
 
 
     // # Ao clicar no botão de enviar, os elementos precisam ser criados
     buttonEnviar.addEventListener('click', function(e){
+      for(let i=0; i < 1; i++){
 
-    // A cada clique do botão enviar, vai ser criado a estrutura
-    for(let i=0; i < 1; i++){
-      // # Criação do <ul>
-      let ul = document.createElement('ul');
+        // # Criação do <ul>
+        let ul = document.createElement('ul');
 
-      // # Adicionando a classe ul na tag <ul> para pegar a estilização
-      ul.classList.add('ul');
+        // # Adicionando a classe ul na tag <ul> para pegar a estilização
+        ul.classList.add('ul');
 
-      // # Criando <li> pra guardar o titulo do assunto do usuário
-      let li_Assunto = document.createElement('li');
+        // # Criando <li> pra guardar o titulo do assunto do usuário
+        let li_Assunto = document.createElement('li');
 
+        // # Adicionando id #assunto-pergunta 
+        li_Assunto.id = 'assunto-pergunta';
+        
 
-      // # Adicionando id #assunto-pergunta 
-      li_Assunto.id = 'assunto-pergunta';
-      
-
-      // # Guardando o valor do input do usuário dentro da minha li
-      li_Assunto.innerText += spanAssunto.innerText; 
+        // # Guardando o valor do input do usuário dentro da minha li
+        li_Assunto.innerText += inputAssunto.value; 
 
 
-      // # Criando <li> para guardar o autor da mensagem
-      let li_autor = document.createElement('li');
-      li_autor.id = 'autor';
-      /*
-        Como eu não tenho um campo para o valor do autor do texto, vou criar um autor aleatorio
-        com a biblioteca matematica
-      */
-      li_autor.innerHTML += `UsuarioAnonimo ${Math.floor(Math.random() * 100)}`;
-      
+        // # Criando <li> para guardar o autor da mensagem
+        let li_autor = document.createElement('li');
+        li_autor.id = 'autor';
+        /*
+          Como eu não tenho um campo para o valor do autor do texto, vou criar um autor aleatorio
+          com a biblioteca matematica
+        */
+        li_autor.innerHTML += `UsuarioAnonimo ${Math.floor(Math.random() * 100)}`;
+        
 
 
-      // # Criando <li> para colocar o comecinho da pergunta
-      let li_comecinhoPergunta = document.createElement('li');
+        // # Criando <li> para colocar o comecinho da pergunta
+        let li_comecinhoPergunta = document.createElement('li');
 
-      // ID que vai ficar o comecinho da pergunta
-      let comecinho_Pergunta = document.querySelector('#comecinho-Pergunta');
+        // ID que vai ficar o comecinho da pergunta
+        let comecinho_Pergunta = document.querySelector('#comecinho-Pergunta');
 
-      // Limpando comecinho_Pergunta
-      comecinho_Pergunta.innerText = '';
+        // Limpando comecinho_Pergunta
+        comecinho_Pergunta.innerText = '';
 
-      // Vou colocar o começo do assunto que o usuário escreve
-      comecinho_Pergunta.innerText += spanConteudo.innerText;
-
-
-      // Agora vou adicionar na tag <li>
-      li_comecinhoPergunta.append(comecinho_Pergunta);
+        // Vou colocar o começo do assunto que o usuário escreve
+        comecinho_Pergunta.innerText += inputConteudo.innerText;
 
 
-      // Última <li> pra colocar na <ul> principal
-      let li_icons = document.createElement('li');
-
-      // Esta lista é responsável por agrupar os <li's> que tem imagens do coração e de lista, e de like
-      let ul_likes = document.createElement('ul');
-      ul_likes.id = 'likes-respostas';
+        // Agora vou adicionar na tag <li>
+        li_comecinhoPergunta.appendChild(comecinho_Pergunta);
 
 
-      // Icone de lista
-      let imgList = document.createElement('img');
-      imgList.setAttribute('src','/img/list.png');
-      imgList.id = 'list-icon';
+        // Última <li> pra colocar na <ul> principal
+        let li_icons = document.createElement('li');
 
-      // Adicionando dentro de <li> a imagem com icone
-      let li_imgList = document.createElement('li');
-      li_imgList.appendChild(imgList)
+        // Esta lista é responsável por agrupar os <li's> que tem imagens do coração e de lista, e de like
+        let ul_likes = document.createElement('ul');
+        ul_likes.id = 'likes-respostas';
 
 
-      // Adicionando dentro do <ul> likes
-      ul_likes.appendChild(imgList);
+        // Icone de lista
+        let imgList = document.createElement('img');
+        imgList.setAttribute('src','/img/list.png');
+        imgList.id = 'list-icon';
+
+        // Adicionando dentro de <li> a imagem com icone
+        let li_imgList = document.createElement('li');
+        li_imgList.appendChild(imgList)
 
 
-      // <li> principal pegando o <ul> que carrega os icones
-      li_icons.appendChild(ul_likes);
+        // Adicionando dentro do <ul> likes
+        ul_likes.appendChild(imgList);
 
 
-      // # Criando Coração da lista
-      let coracaoImg = document.createElement('img');
-      coracaoImg.setAttribute('src','/img/heart.png');
-
-      // Adicionando dentro de <li> a imagem com coracao
-      let li_imgCoracao = document.createElement('li');
-      li_imgCoracao.appendChild(coracaoImg)
+        // <li> principal pegando o <ul> que carrega os icones
+        li_icons.appendChild(ul_likes);
 
 
-      // Adicionando dentro do <ul> likes
-      ul_likes.appendChild(coracaoImg);
+        // # Criando Coração da lista
+        let coracaoImg = document.createElement('img');
+        coracaoImg.setAttribute('src','/img/heart.png');
+
+        // Adicionando dentro de <li> a imagem com coracao
+        let li_imgCoracao = document.createElement('li');
+        li_imgCoracao.appendChild(coracaoImg)
 
 
-      // # Botões de like e resposta
-      let like = document.getElementById('like');
-      let liLike = document.createElement('li');
-      liLike.appendChild(like);
-      
-      // Adicionando dentro do <ul> likes
-      ul_likes.appendChild(liLike);
+        // Adicionando dentro do <ul> likes
+        ul_likes.appendChild(coracaoImg);
+
+
+        // # Botões de like e resposta
+        let like = document.getElementById('like');
+        let liLike = document.createElement('li');
+        liLike.appendChild(like);
+        
+        // Adicionando dentro do <ul> likes
+        ul_likes.appendChild(liLike);
 
 
 
-      // Montando toda a estrutura 
-      ul.appendChild(li_Assunto);
-      ul.appendChild(li_autor);
-      ul.appendChild(li_comecinhoPergunta);
-      ul.appendChild(li_icons);
-    }
+        // Montando a estrutura do <ul> colocando o Assunto, o autor, o começo da pergunta, e os icones 
+        ul.appendChild(li_Assunto);
+        ul.appendChild(li_autor);
+        ul.appendChild(li_comecinhoPergunta);
+        ul.appendChild(li_icons);
 
 
+        // Adicionando o <ul> dentro dos containers
+        container_divs.appendChild(ul);
+
+
+        
+        /*
+          3 Parte:
+          - Quando o botão de enviar for clicado, eu vou esconder as divs de:
+          Assunto && input Assunto
+          Conteudo && input Conteudo
+          paragrafo: "Tem uma dúvida ou sugestão?" && o botão de enviar
+        */
+        h3_conteudo.classList.add('hidden');
+        inputConteudo.classList.add('hidden');
+        inputAssunto.classList.add('hidden');
+        h3Assunto.classList.add('hidden');
+        paragrafoSugestao.classList.add('hidden');
+        bold.classList.add('hidden');
+        italic.classList.add('hidden');
+        divCinza.classList.add('hidden');
+        container_divs.classList.add('blur');
+
+        /*
+          4 Parte:
+          - Vou colocar a div feedback em cima do blur
+        */
+        aguardo_feedback.style.display = 'block';
+
+
+
+        /*
+          5 Parte:
+          - Mostrar o span que  o tópico foi enviado com sucesso
+          - Mostrar o paragrafo que agradece a contribuição
+          - Mostrar o span que mostra Descubra outros  trabalhos!
+          - Mostrar o botão criar novo tópico
+          - Assim  que esse botão for criado, ele vai mostrar todos os itens
+          que eu coloquei a classe hidden, e adicionar eles de volta
+        */
+        let topico_enviado_container = document.getElementById('topico-enviado-container');
+        topico_enviado_container.style.display = 'block';
+       
+        let topicoSucesso = document.getElementById('topicoSucesso');
+        topicoSucesso.id = 'topicoSucesso';
+
+        let botaoCriarNovoTopico = document.querySelector('#topico-enviado-container button');
+        botaoCriarNovoTopico.addEventListener('click', ()=>{
+          /*
+            Assim que o botão criar novo tópico for clicado,
+            o container que carrega:
+              Assunto && input Assunto
+              Conteudo && input Conteudo
+              paragrafo: "Tem uma dúvida ou sugestão?" && o botão de enviar
+            vai aparecer, para que o usuário digite novamente no  input
+          */
+          h3_conteudo.classList.remove('hidden');
+          inputConteudo.classList.remove('hidden');
+          inputAssunto.classList.remove('hidden');
+          h3Assunto.classList.remove('hidden');
+          paragrafoSugestao.classList.remove('hidden');
+          bold.classList.remove('hidden');
+          italic.classList.remove('hidden');
+          divCinza.classList.remove('hidden');
+
+          // O container informando que o topico foi enviado vai sumir
+          topico_enviado_container.style.display = 'none';
+          
+          // Tirando o efeito de blur dos containers, quando botão  criar novo topico for clicado
+          container_divs.classList.remove('blur');
+
+          // Ocultando feedback
+          aguardo_feedback.style.display = 'none';
+
+
+        })
+
+      }   
+
+    })
   })
-  
-
-})
-  
 }
 
 
