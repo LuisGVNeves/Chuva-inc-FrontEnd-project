@@ -80,7 +80,7 @@ function adicionarDiv(){
 
     /*
       1 Parte
-      - Ao clicar no botão Criar Tópico, toda a área que contém as frases
+      - Ao clicar no botão Criar Tópico, toda a área discussões que contém as frases
         "compartilhe suas ideias ou dúvidas com autores"
         "Sabia que o maior estimulo .. "
         imagens referentes ao post
@@ -113,37 +113,22 @@ function adicionarDiv(){
     // Paragrafo Tem uma dúvida ou sugestão? 
     let paragrafoSugestao = document.createElement('p');
     paragrafoSugestao.innerText = 'Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!';
-    paragrafoSugestao.style.position = 'absolute';
-    paragrafoSugestao.style.marginTop = '4%';
-    paragrafoSugestao.style.width = '965.37px';
-    paragrafoSugestao.style.height = '18px';
-    paragrafoSugestao.style.textAlign = 'center';
-    paragrafoSugestao.style.fontFamily = 'Quicksand';
+    paragrafoSugestao.id = 'paragrafoSugestao';
     discussoes_container.appendChild(paragrafoSugestao);
 
     // H3 Assunto 
     let h3Assunto = document.createElement('h3');
     h3Assunto.innerText = 'Assunto';
-    h3Assunto.style.marginTop = '3.1%';
-    h3Assunto.style.marginLeft = '-90%';
-    h3Assunto.style.color = '#ED7839';
+    h3Assunto.id = 'h3Assunto';
     discussoes_container.appendChild(h3Assunto);
 
 
     // INPUT sobre assunto a ser enviado
     let inputAssunto = document.createElement('input');
-    inputAssunto.style.width = '1090px';
-    inputAssunto.style.height = '39px';
-    inputAssunto.style.border = '1px solid #CCC';
     inputAssunto.value = 'Defina um tópico para notificar os autores..';
-    inputAssunto.style.color = "#4D4D4D";
-    inputAssunto.contentEditable = 'true';
-    inputAssunto.style.textAlign = 'start';
-    inputAssunto.style.lineHeight = '39px';
-    inputAssunto.style.fontWeight = '500';
-    inputAssunto.style.fontSize = '14px';
-    inputAssunto.style.paddingLeft = '22px';
+    inputAssunto.id = 'inputAssunto';
     discussoes_container.appendChild(inputAssunto);
+
     // Assim que o input assunto for clicado, quero limpar o input
     inputAssunto.addEventListener('click', () =>{
       inputAssunto.value = '';
@@ -153,9 +138,7 @@ function adicionarDiv(){
     // H3 Palavra escrita conteudo 
     let h3_conteudo = document.createElement('h3');
     h3_conteudo.innerText = 'Conteúdo';
-    h3_conteudo.style.marginTop = '3.1%';
-    h3_conteudo.style.marginLeft = '-89%';
-    h3_conteudo.style.color = '#ED7839';
+    h3_conteudo.id = 'h3_conteudo';
     discussoes_container.appendChild(h3_conteudo);
     
 
@@ -164,57 +147,36 @@ function adicionarDiv(){
     // INPUT sobre CONTEUDO a ser enviado
     let inputConteudo = document.getElementById('inputConteudo');
     inputConteudo.classList.remove('hidden');
-    inputConteudo.style.width = '1090px';
-    inputConteudo.style.height = '113px';
-    inputConteudo.style.border = '1px solid #CCC';
-    inputConteudo.style.color = '#4D4D4D';
-    inputConteudo.style.marginTop = '-38%';
-    inputConteudo.style.marginLeft = '1.2%';
-    inputConteudo.style.position = 'absolute';
+    inputConteudo.id = 'inputConteudo';
     inputConteudo.contentEditable = 'true';
-    inputConteudo.style.textAlign = 'start';
-    inputConteudo.style.lineHeight = '39px';
-    inputConteudo.style.fontWeight = '500';
-    inputConteudo.style.fontSize = '14px';
-    inputConteudo.style.paddingLeft = '22px';
-    inputConteudo.style.outline = '0px'; // Remover borda do input quando clicado
-
 
 
     // Bold
     let bold = document.getElementById('bold');
+    bold.classList.remove('hidden');
     bold.addEventListener('click', function(){
       inputConteudo.style.fontWeight = 'bold';
     })
     
     // Italic
     let italic = document.getElementById('italic');
+    italic.classList.remove('hidden');
     italic.addEventListener('click', function(){
       inputConteudo.style.fontStyle = 'italic';
     })
 
+    // Div com background cinza que fica sobre bold e italic
+    let divCinza = document.getElementById('cinza');
+    divCinza.classList.remove('hidden');
+
+
+    // botão de enviar
+    let buttonEnviar = document.getElementById('buttonEnviar');
+    buttonEnviar.id = 'buttonEnviar';
+    buttonEnviar.classList.remove('hidden');
 
 
 
-    // #### Criação do botão para enviar o tópico
-    let buttonEnviar = document.createElement('button');
-    buttonEnviar.innerText = 'Enviar';
-    buttonEnviar.style.width = '205px';
-    buttonEnviar.style.height  = '31px';
-    buttonEnviar.style.lineHeight  = '31px';
-    buttonEnviar.style.border = 'none';
-    buttonEnviar.style.color = '#fff';
-    buttonEnviar.style.display = 'flex';
-    buttonEnviar.style.flexDirection = 'column';
-    buttonEnviar.style.alignItems = 'center';
-    buttonEnviar.style.background = 'linear-gradient(#FEB154, #F1833E)';
-    buttonEnviar.style.cursor = 'pointer';
-    buttonEnviar.style.position = 'absolute';
-
-
-
-    // Colocando botão de enviar na div principal
-    discussoes_container.appendChild(buttonEnviar);
   
 
 
