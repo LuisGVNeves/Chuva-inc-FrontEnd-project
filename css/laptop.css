@@ -1,48 +1,43 @@
 
-/*Media query Ipad*/
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+/*Media query Laptop*/
+@media screen and (max-width: 1440px) and (min-width: 900px) {
   /*Barra lateral*/
   #nav-bar-container{
-    width: 180px;
-    height: 100%;
-    display: flex;
+    width: 300px;
   }
   /*div onde guarda titulo Principal*/
   #slaca-2019{
-    width: 180px;
+    width: 300px;
   }
 
   /*imagem slaca*/
   #slaca-imagem{
-    width: 180px;
-    left: 0;
+    left: 2.5%;
   }
 
   /*Links de navegação barra esquerda*/
   #main-navigation{
-    width: 180px;
-    top: 40%;
+    width: 300px;
+    top: 45%;
   }
 
   /*Itens links de navegação*/
   #main-navigation ul li{
-    width: 180px;
+    width: 300px;
   }
 
 
   /*Header da página*/
   #head-principal{
-    height: 88px;
-    padding-left: 18%;
+    height: 80px;
+    padding-left: 25%;
   }
 
   /*Botão PT-BR*/
   #botao-pt-br{
-    width: 70px;
+    width: 80px;
     position: absolute;
-    top: 5px;
-    left: 85%;
-
+    left: 74%;
   }
 
   /* Usuario header onde fica foto e email CONTAINER*/
@@ -50,11 +45,11 @@
     line-height: 17.5px;
     width: 150px;
     height: 34px;
-    flex-direction: row;
-    padding-left: 0%;
-    margin-left: -7%;
-    margin-top: 33px;
+    /*Mudar isso aqui*/
+    margin-left: 12.1%;
+    margin-top: 20px;
   }
+
   /*Section filha imediata de head-principal*/
   #head-principal > section{
     padding-left: 1px;
@@ -63,38 +58,27 @@
 
   /*Foto usuario*/
   #photo-usuario{
-    left: 94%;
-    top: 3%;
+    left: 93.2%;
+    top: 2%;
   }
-  /*Palavra bem vindo*/
-  #bem-vindo{
-    padding-left: 50%;
-    padding-top: 5px;
-  }
-  /*email*/
-  #email{
-    padding-left: 0%;
-
-  }
-
 
   /*Container principal da pagina*/
   #navegacao-principal {
-    width: 835px;
-    margin-left: 18.5%;
+    width: 1005px;
+    margin-left: 24.8%;
   }
 
   /*Principal texto da página*/
   #noticia-principal{
     width: 586px;
     height: 54px;
-    font-size: 15px;
+    font-size: 16px;
     padding-top: 18px;
   }
 
   /*Video que seria colocado na página*/
   #video-img{
-    width: 500px;
+    width: 650px;
     height: 360px;
     margin-top: 25px;
   }
@@ -104,8 +88,8 @@
   #botoes-container{
     width: 220px;
     height: 40px;
-    margin-left: 68%;
-    margin-top: -4.1%;
+    margin-left: 78%;
+    margin-top: -3.1%;
   }
 
   /*Link citação do trabalho*/
@@ -117,15 +101,15 @@
   #detalhes{
     width: 242px;
     height: 360px;
-    margin-left: 65%;
-    margin-top: 5%;
+    margin-left: 75%;
+    margin-top: 4%;
   }
 
 
 
   /*Resumo noticia principal*/
   #container-resumo{
-    width: 790px;
+    width: 1000px;
     margin-top: 7%;
     /*Paragrafos não sairem da div*/
     overflow: hidden;
@@ -133,32 +117,32 @@
   /*Palavra ver mais pra div descer*/
   #verMais {
     position: absolute;
-    left: 84.1%;
-    top: 104.2%;
+    left: 45.7%;
+    top: 100.9%;
   }
 
 
   /*    Discussões container    */
   #discussoes-container{
-    width: 790px;
-    height: 965px;
+    width: 1000px;
+    height: 910px;
   }
 
 
 
   /*  Área de discussões com CRUD onde tem likes e coração*/
   #container-divs{
-    width: 780px;
-    height: 588px;
-    margin-left: 19.1%;
-    margin-top: -15.6%;
+    width: 994px;
+    height: 500px;
+    margin-left: 25.1%;
+    margin-top: -10%;
   }
 
 
   /*Footer*/
   #foot-container{
     width: 800px;
-    margin-left: 20%;
+    margin-left: 25%;
   }
 
 
@@ -182,7 +166,7 @@
 
   /*Input assunto*/
   #inputAssunto{
-    width: 780px;
+    width: 980px;
     padding-left: 6px;
   }
 
@@ -193,28 +177,28 @@
 
   /*input Conteudo*/
   #inputConteudo{
-    width: 780px;
+    width: 980px;
     height: 113px;
-    margin-top: -75%;
     margin-left: 0.5%;
+    margin-top: -49%;
   }
   #bold{
     top: 24.5%;
     left: 3.7%;
   }
   #cinza{
-    width: 705.5px;
+    width: 954px;
     height: 40px;
-    margin-top: -67.8%;
-    margin-left: 0.6%;
+    margin-top: -43.9%;
+    margin-left: 0.5%;
   }
 
 
   /*Estilização do container após clicar em ver mais*/
   #container-divsVerMais{
-    margin-top: 30%;
-    margin-left: 19.1%;
-    width: 780px;
+    margin-top: 22%;
+    margin-left: 25.1%;
+    width: 994px;
     height: 488px;
     overflow: auto;
   }
@@ -226,7 +210,7 @@
     width: 790px;
     height: 330px;
     position: absolute;
-    left: 18.7%;
+    left: 30.7%;
     display: none;
     word-wrap: break-word;
   }
@@ -260,8 +244,8 @@
   #aguardo-feedback{
     width: 314px;
     height: 210px;
-    left: 44%;
-    top: 168%;
+    left: 49%;
+    top: 170%;
   }
 
   #aguardo-feedback #editarTopico{
