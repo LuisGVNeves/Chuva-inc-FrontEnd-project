@@ -1,148 +1,199 @@
 
-/*Media query Laptop*/
-@media screen and (max-width: 1440px) and (min-width: 900px) {
+/*Media query Ipad*/
+@media screen and (max-width: 667px) and (min-width: 375px) {
   /*Barra lateral*/
   #nav-bar-container{
-    width: 300px;
+    width: 100px;
+    height: 100%;
+    display: flex;
   }
   /*div onde guarda titulo Principal*/
   #slaca-2019{
-    width: 300px;
+    width: 100px;
   }
-
   /*imagem slaca*/
   #slaca-imagem{
-    left: 2.5%;
+    width: 100px;
+    left: 0;
+    top: 5%;
   }
 
   /*Links de navegação barra esquerda*/
   #main-navigation{
-    width: 300px;
-    top: 45%;
+    width: 100px;
+    top: 30%;
   }
 
   /*Itens links de navegação*/
   #main-navigation ul li{
-    width: 300px;
+    width: 100px;
+    padding-left: 10px;
+    font-size: 10px;
   }
 
 
   /*Header da página*/
   #head-principal{
-    height: 80px;
-    padding-left: 25%;
+    height: 60px;
+    padding-left: 21%;
+  }
+  /*Principal titulo*/
+  #head-principal h1 {
+    font-size: 10px;
+  }
+  /*Paragrafo do titulo*/
+  #head-principal p{
+    font-size: 8px;
+  }
+  /*ISSN 123...*/
+  #head-principal span {
+    font-size: 8px;
   }
 
   /*Botão PT-BR*/
   #botao-pt-br{
-    width: 80px;
-    position: absolute;
-    left: 72%;
+    width: 40px;
+    height: 20px;
+    line-height: 15px;
+    left: 83.5%;
+    padding-top: 1px;
+    top: 0%;
+    font-size: 8px;
   }
 
   /* Usuario header onde fica foto e email CONTAINER*/
   .usuario-header{
-    line-height: 17.5px;
     width: 150px;
     height: 34px;
-    /*Mudar isso aqui*/
-    margin-left: 12.1%;
+    flex-direction: row;
+    padding-left: 0%;
+    margin-left: -12%;
     margin-top: 20px;
   }
 
-  /*Section filha imediata de head-principal*/
-  #head-principal > section{
-    padding-left: 1px;
-    padding-top: 10px;
-  }
 
   /*Foto usuario*/
   #photo-usuario{
-    left: 93.2%;
-    top: 2%;
+    left: 95%;
+    top: 4%;
+    width: 20px;
+    height: 20px;
   }
+  /*Palavra bem vindo*/
+  #bem-vindo{
+    padding-left: 60%;
+    font-size: 8px;
+  }
+  /*email*/
+  #email{
+    font-size: 8px;
+  }
+
 
   /*Container principal da pagina*/
   #navegacao-principal {
-    width: 1005px;
-    margin-left: 24.8%;
+    width: 385px;
+    margin-left: 20%;
   }
 
   /*Principal texto da página*/
   #noticia-principal{
-    width: 586px;
+    width: 200px;
     height: 54px;
-    font-size: 16px;
-    padding-top: 18px;
+    font-size: 8px;
+    padding-top: 15px;
+    line-height: 10px;
   }
 
   /*Video que seria colocado na página*/
   #video-img{
-    width: 650px;
-    height: 360px;
-    margin-top: 25px;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
   }
 
 
   /*Container dos botoes*/
   #botoes-container{
-    width: 220px;
     height: 40px;
-    margin-left: 78%;
-    margin-top: -3.1%;
+    margin-left: 58%;
+    margin-top: -12.1%;
   }
 
-  /*Link citação do trabalho*/
-  #link-citacao{
-    margin-left: -37px;
-  }
 
   /*Container Detalhes da noticia*/
   #detalhes{
-    width: 242px;
-    height: 360px;
-    margin-left: 75%;
-    margin-top: 4%;
+    width: 160px;
+    height: 200px;
+    margin-left: 56%;
+    margin-top: 5%;
+    font-size: 8px;
+    overflow-x: auto;
+  }
+
+  
+  /*Botoes principais do site do noticia*/
+  #download{
+    width: 40px;
+    height: 28px;
+    font-size: 5px;
+  }
+
+
+  /*Link citação do trabalho*/
+  #link-citacao{
+    text-align: center;
+    margin-top: 50px;
+    margin-left: -71px;
+    font-size: 10px;
   }
 
 
 
   /*Resumo noticia principal*/
   #container-resumo{
-    width: 1000px;
-    margin-top: 7%;
-    /*Paragrafos não sairem da div*/
+    width: 380px;
+    height: 280px;
+    margin-top: 15%;
     overflow: hidden;
   }
+
   /*Palavra ver mais pra div descer*/
   #verMais {
     position: absolute;
-    left: 45.7%;
-    top: 100.9%;
+    left: 84.1%;
+    top: 66%;
+    font-weight: bold;
   }
 
 
   /*    Discussões container    */
   #discussoes-container{
-    width: 1000px;
-    height: 910px;
+    width: 380px;
+    height: 965px;
+    margin-top: 20%;
   }
 
 
 
   /*  Área de discussões com CRUD onde tem likes e coração*/
   #container-divs{
-    width: 994px;
-    height: 500px;
-    margin-left: 25.1%;
-    margin-top: -10%;
+    width: 380px;
+    height: 588px;
+    margin-left: 20.1%;
+    margin-top: -38.6%;
   }
 
 
   /*Footer*/
   #foot-container{
-    width: 800px;
+    width: 350px;
     margin-left: 25%;
+    margin-top: 10%;
+  }
+  #foot-container #div-text{
+    word-wrap: break-word;
+    font-size: 10px;
   }
 
 
@@ -159,47 +210,56 @@
 
   /* paragrafoSugestao que aparece: tem uma duvida ou sugestao*/
   #paragrafoSugestao{
-    margin-top:5%;
-    width:765.37px;
+    margin-top:10%;
+    width:365.37px;
   }
 
+  /*Assunto h3*/
+  #h3Assunto{
+    margin-top: 12%;
+    margin-left: -75%;
+  }
 
   /*Input assunto*/
   #inputAssunto{
-    width: 980px;
+    width: 360px;
     padding-left: 6px;
   }
 
   /*Conteudo do input h3*/
   #h3_conteudo {
-    margin-top: 4.1%;
+    margin-top: 5%;
+    margin-left: -73%;
   }
 
   /*input Conteudo*/
   #inputConteudo{
-    width: 980px;
+    width: 360px;
     height: 113px;
-    margin-left: 0.5%;
-    margin-top: -49%;
+    margin-top: -158%;
+    margin-left: 2%;
+  }
+  #italic{
+    left: 20%;
   }
   #bold{
     top: 24.5%;
     left: 3.7%;
   }
   #cinza{
-    width: 954px;
+    width: 190px;
     height: 40px;
-    margin-top: -43.9%;
-    margin-left: 0.5%;
+    margin-top: -142.5%;
+    margin-left: 2.2%;
   }
 
 
   /*Estilização do container após clicar em ver mais*/
   #container-divsVerMais{
-    margin-top: 22%;
-    margin-left: 25.1%;
-    width: 994px;
-    height: 488px;
+    margin-top: 60%;
+    margin-left: 19.1%;
+    width: 380px;
+    height: 588px;
     overflow: auto;
   }
 
@@ -207,34 +267,34 @@
 
   /*Mensagem que aparece quando topico for enviado*/
   #topico-enviado-container{
-    width: 790px;
+    width: 290px;
     height: 330px;
     position: absolute;
-    left: 30.7%;
+    left: 5.7%;
     display: none;
     word-wrap: break-word;
   }
   #topicoSucesso{
     width: 380px;
     position: absolute;
-    top: 24%;
+    top: 38%;
   }
   #topico-enviado-container p{
-    width: 740px;
-    margin-left: 4%;
-    margin-top: 15%;
+    width: 240px;
+    margin-left: 48%;
+    margin-top: 55%;
   }
   #topico-enviado-container a{
     width: 280px;
     height: 20px;
-    margin-top: 7%;
-    margin-left: 34%;
+    margin-top: 10%;
+    margin-left: 45%;
     position: absolute;
     text-align: center;
   }
   #topico-enviado-container button{
-    margin-top: 17%;
-    margin-left: 37%;
+    margin-top: 40%;
+    margin-left: 50%;
     width: 235.15px;
     height: 32px;
   }
@@ -242,18 +302,18 @@
 
   /*Div que aparece de feedback quando usuario envia*/
   #aguardo-feedback{
-    width: 314px;
+    width: 214px;
     height: 210px;
-    left: 49%;
-    top: 170%;
+    left: 34%;
+    top: 231%;
   }
 
   #aguardo-feedback #editarTopico{
     width: 100px;
     height: 50px;
     position: absolute;
-    top: 25%;
-    left: 35%;
+    top: 34%;
+    left: 30%;
     bottom: 1%;
   }
 }
