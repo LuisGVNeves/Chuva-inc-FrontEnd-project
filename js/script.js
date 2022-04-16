@@ -1,3 +1,6 @@
+// Variáveis globais
+
+
 // Container das respostas que vão sendo criadas precisam ficar rebaixado
 let container_divs = document.querySelector('#container-divs');
 
@@ -8,9 +11,15 @@ let topico_enviado_container = document.querySelector('#topico-enviado-container
 let aguardo_feedback = document.getElementById('aguardo-feedback');
 
 
+/*
+  Toda vez que o browser carregar, ele vai chamar essas três funções, caso elas
+  sejam invocadas, e vai "ocultar" o feedback que é gerado quando o usuário
+  aperta no botão de enviar Tópico.
+  - Essa funcionalidade de ocultar tópico está aqui, por que toda vez que o HTML
+  carregava, como esse elemento está com posição absolute, ele ficava no meio da tela
+  atrapalhando o layout, então eu ocultei ele ao carregar o HTML;
+*/
 window.addEventListener('load', function(){
-  
-
   // # funcao mostrarParagrafos ao clicar, vai aparecer os paragrafos
   mostrarParagrafos();
 
@@ -24,20 +33,33 @@ window.addEventListener('load', function(){
   aguardo_feedback.style.display = 'none';
 })
 
-// #  Texto ver mais
+
+/*
+  Essa variável basicamente é quando o usuário clica no parágrafo verMais que
+  está localizado na div Resumo.
+  - Quando essa variável é clicada, vai mostrar o resto dos paragrafos pela função
+  mostrarParagrafos() 
+*/
 let verMais = document.querySelector('#verMais');
 
-// # Todos os paragrafos
+/*
+  Paragrafos ocultos são paragrafos que estão  ou vão ser ocultos, 
+  depende da função  mostrarParagrafos() ou ocultarParagrafos(),
+  toda  vez que uma delas é executada, o display dos paragrafos ocultos 
+  vai pro valor none
+*/
 let paragrafos_ocultos = document.querySelector('#paragrafos-ocultos');
 
+/*
+  # Função principal: tirar display none dos paragrafos, o resto é só acompanhamento de CSS
+  para não quebrar layout
+*/
 function mostrarParagrafos() {
 
-  /*
-    Palavra ver mais recebe um escutador, ao ser clicada, vai revelar 
-    os paragrafos ocultos
-  */
   verMais.addEventListener('click', function(e){
     paragrafos_ocultos.style.display = 'block';
+
+    // # Acompanhando com o CSS, para não quebrar o layout com essa lógica
 
     // Aumentando a borda da div que tem os paragrafos, ao ser clicada
     let container_resumo = document.querySelector('#container-resumo');
@@ -51,15 +73,17 @@ function mostrarParagrafos() {
 
     // Escondendo div de feedback após usuario enviar topico
     aguardo_feedback.style.display = 'none';
-
     
-    
-    // Parando a propagação de eventos
+    // Parando a propagação de eventos - Essa função tava chamando outro evento | Parei com esse método
     e.stopPropagation();
-  })
+  });
 
 }
 
+/*
+  # Função principal: colocar display none dos paragrafos, o resto é só acompanhamento de CSS
+  para não quebrar layout
+*/
 function ocultarParagrafos(){
   // # Todos os paragrafos
   let paragrafos_resumo_noticia = document.querySelector('#paragrafos-resumo-noticia');
@@ -81,8 +105,6 @@ function ocultarParagrafos(){
   
 }
 
-
-// Função para adicionar a div ao botão criar Topico ser clicado
 
 /*
   - Objetivo: Adicionar uma <ul> toda vez que o botão criar tópico
@@ -149,7 +171,7 @@ function adicionarDiv(){
     inputAssunto.id = 'inputAssunto';
     discussoes_container.appendChild(inputAssunto);
 
-    // Assim que o input assunto for clicado, quero limpar o input
+    // ###  Assim que o input assunto for clicado, quero limpar o input
     inputAssunto.addEventListener('click', () =>{
       inputAssunto.value = '';
     })
@@ -198,9 +220,10 @@ function adicionarDiv(){
 
 
 
-
     // # Ao clicar no botão de enviar, os elementos precisam ser criados
     buttonEnviar.addEventListener('click', function(e){
+
+      // For bem rápido só pra ter uma estrutura pra criar
       for(let i=0; i < 1; i++){
 
         // # Criação do <ul>
@@ -349,16 +372,18 @@ function adicionarDiv(){
         let topicoSucesso = document.getElementById('topicoSucesso');
         topicoSucesso.id = 'topicoSucesso';
 
+        /*
+          Assim que o botão criar novo tópico for clicado,
+          o container que carrega:
+            Assunto && input Assunto
+            Conteudo && input Conteudo
+            paragrafo: "Tem uma dúvida ou sugestão?" && o botão de enviar
+          vai aparecer, para que o usuário digite novamente no  input
+        */
         let botaoCriarNovoTopico = document.querySelector('#topico-enviado-container button');
+        
         botaoCriarNovoTopico.addEventListener('click', ()=>{
-          /*
-            Assim que o botão criar novo tópico for clicado,
-            o container que carrega:
-              Assunto && input Assunto
-              Conteudo && input Conteudo
-              paragrafo: "Tem uma dúvida ou sugestão?" && o botão de enviar
-            vai aparecer, para que o usuário digite novamente no  input
-          */
+
           h3_conteudo.classList.remove('hidden');
           inputConteudo.classList.remove('hidden');
           inputAssunto.classList.remove('hidden');
